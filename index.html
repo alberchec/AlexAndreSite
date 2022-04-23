@@ -1,0 +1,301 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<title>ALEX ANDRE Terraplenagem</title>
+		<!--<link rel="stylesheet" href="reset.css" type="text/css" media="screen" />!-->
+		<link id="EstiloCSS" rel="stylesheet" href="style.css" type="text/css" media="screen" />
+		<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>!-->
+		
+		<!--<link href="lightbox/css/lightbox.css" rel="stylesheet" />
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans|Baumans' rel='stylesheet' type='text/css'/>
+		<script src="js/modernizr.js"></script>
+		<script src="js/respond.min.js"></script>
+		<!- include extern jQuery file but fall back to local file if extern one fails to load 
+		<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript">window.jQuery || document.write('<script type="text\/javascript" src="js\/1.7.2.jquery.min"><\/script>')</script>
+		<script src="lightbox/js/lightbox.js"></script>
+		<script src="js/prefixfree.min.js"></script>
+		<script src="js/jquery.slides.min.js"></script>
+		!-->
+	</head>
+	<script type="text/javascript" src="scriptOnloadOnresize.js"></script>
+	<body id="corpo">
+
+		<!--   CABEÇALHO   !-->
+		<header id="cabecalho">
+			<a id="logao"><img id="imagemlogo" src="logofirma.jpg"/></a>
+			<img id="menumobile" src="menu-icon.png"/>
+			<img id="closemenumobile" src="closemenu.png"/>
+			<nav id="navmenu">
+				<ul>
+					<li><a class="menu" id="hom2">Home</a></li>
+					<li><a class="menu" id="aempr2">A empresa</a></li>
+					<li><a class="menu" id="serv2">Serviços</a></li>
+					<li><a class="menu" id="obrasreal2">Obras Realizadas</a></li>
+					<li><a class="menu" id="cont2">Contato</a></li>
+				</ul>
+			</nav>
+		</header>
+		<div id="fundomobile"></div>
+		<script type="text/javascript" src="scriptcabecalho.js"></script>
+
+		<!--   SLIDESHOW   !-->
+		<a id="hom"></a>
+		<div id="slideshow">
+			<div id="slidebotao">
+				<div id="botao1div" onclick="botao1()">
+					<input id="botao1" name="slidebutton" type="radio" onclick="botao1()"/>
+				</div>
+				<div id="botao2div" onclick="botao2()">
+					<input id="botao2" name="slidebutton" type="radio" onclick="botao2()"/>
+				</div>
+				<div id="botao3div" onclick="botao3()">
+					<input id="botao3" name="slidebutton" type="radio" onclick="botao3()"/>
+				</div>
+			</div>
+			<a id="setaesquerdalink" onclick="setaesquerda()">
+				<div id="slideshowsetaesquerda">
+					<img src="slideshowarrowleft.png"/>
+				</div>
+			</a>
+			<a id="setadireitalink" onclick="setadireita()">
+				<div id="slideshowsetadireita">
+					<img src="slideshowarrowright.png"/>
+				</div>
+			</a>
+			<div id="slide1">
+				<img id="slidefoto1" src="motorgrader2.jpg" />
+			</div>
+			<div class="slidetexto" id="slidetexto1">
+				<h6 class="textoslide1">Uso de sistema inovador:
+				</h6>
+				<h6 class="textoslide1">maior planicidade para base de
+				</h6>
+				<h6 class="textoslide1">piso industrial, economia de
+				</h6>
+				<h6 class="textoslide1">concreto e materiais!
+				</h6>
+			</div>
+			<div id="slide2">
+				<img id="slidefoto2" src="pavimentacao.jpg" />
+			</div>
+			<div class="slidetexto" id="slidetexto2">
+				<h6 class="textoslide2">Solução completa
+				</h6>
+				<h6 class="textoslide2">em pavimentação!
+				</h6>
+			</div>
+			<div id="slide3">
+				<img id="slidefoto3" src="loteamento.jpg" />
+			</div>
+			<div class="slidetexto" id="slidetexto3">
+				<h6 class="textoslide3">Infraestrutura completa
+				</h6>
+				<h6 class="textoslide3">para loteamentos!
+				</h6>
+			</div>
+		</div>
+		<script type="text/javascript" src="scriptslideshow.js"></script>
+
+		<!--   A EMPRESA   !-->
+		<section id="aempresa">
+			<a id="aempr"></a>
+			<h2>A empresa</h2>
+			<div id="aempresafoto1">
+				<img id="img1" src="basepiso2.jpg"/>
+				<img id="img2" src="familia2.jpg"/>
+				<!--<img id="img3" src="30anos.png"/>-->
+			</div>
+			<ul>
+				<!--<li><img src="familia.jpg"/></li>!-->
+				<li><p> &nbsp Fundada em 1987, há 35 anos, a Alex 		Andre é uma empresa voltada à execução de obras de 		base de piso industrial, terraplenagem, pavimentação,	 loteamentos e serviços complementares.</p>
+					<p id="textoempresa2"> &nbsp Com sede em Itupeva, estado de São Paulo, firmou-se como empresa tradicional do setor de terraplenagem e pavimentação, conquistando a confiança de seus clientes pelo seu comportamento ético, sua capacidade gerencial e pela excelência técnica. Em todas essas décadas a Alex Andre não abriu mão de novas tecnologias e recursos humanos para o aperfeiçoamento dos seus serviços.</p>
+				</li>
+			</ul>
+			<ul>	
+				<li id="aempresatexto2"><p> &nbsp Por isso pode oferecer moderno maquinário, equipamentos e veículos, com pessoal qualificado, para trabalhos pesados de terraplenagem, pavimentação, galerias de águas pluviais, redes de água e esgoto; assim a Alex Andre se orgulha de ter cumprido com todas as exigências, ao longo destes anos, e contribuído com o desenvolvimento do país.</p>
+				</li>
+				<!--<li class="elementoadireita"><img src="frota.jpg"/></li>!-->
+			</ul>
+			<div id="aempresafoto2">
+				<img id="img4" src="d8r.jpg"/>
+				<img id="img5" src="infrasub2.jpg"/>
+				<img id="img6" src="frota.jpg"/>
+			</div>
+		</section>	
+
+		<!--   SERVIÇOS   !-->
+		<section id="servicos">
+			<a id="serv"></a>
+			<h2>Serviços prestados</h2>
+			<ul>
+				<li class="gradeservicos"><img src="basepiso.jpg"/>
+					<h3>Base de piso para galpões industriais</h3>
+					<p>Área de especialidade da empresa, utilização de sistema inovador, que garante incomparável planicidade, levando a economia de concreto e materiais no piso industrial.</p>
+				</li>
+				<li class="gradeservicos"><img src="obra2foto1.jpg"/>
+					<h3>Pavimentação</h3>
+					<p>Pavimentação de patios de galpões industrias e vias.</p>
+				</li>
+				<li class="gradeservicos"><img src="loteamento2.jpg"/>
+					<h3>Loteamentos</h3>
+					<p>Infraestrutura completa para loteamentos, terraplenagem, pavimentação, sistema de drenagem pluvial, esgoto.</p>
+				</li>
+				<li class="gradeservicos"><img src="d8r.jpg"/>
+					<h3>Terraplenagem geral</h3>
+					<p>Execução de escavações, aterros, taludes, platos, todos os serviços de terraplenagem.</p>
+				</li>
+				<li class="gradeservicos"><img src="infrasub.jpg"/>
+					<h3>Infraestrutura subterrânea</h3>
+					<p> Solução completa em infraestrutura subterrânea.</p>
+				</li>
+				<li class="gradeservicos"><img src="frota.jpg"/>
+					<h3>Locação de equipamentos c/ operador</h3>
+					<p>Contamos com frota completa, desde Retroescavadeiras, Pá Carregadeiras, Escavadeiras, Motoniveladoras, caminhões basculantes, a cam. Muncks e MotoScrapers.</p>
+				</li>		
+			</ul>
+		</section>
+
+		<!--   OBRAS REALIZADAS   !-->
+		<section id="obras">
+			<a id="obrasreal"></a>
+			<h2>Obras Realizadas</h2>
+			<ul id="obraslista">
+				<li id="obras1">
+					<img src="obra1foto1.jpg"/>
+					<h3 id="obras1texto">Obra CCP</h3>
+				</li>
+				<li id="obras2">
+					<img src="obra2foto1.jpg"/>
+					<h3 id="obras2texto">Pavimentação Cobreq</h3>
+				</li>
+				<li id="obras3">
+					<img src="obra3foto1.jpg"/>
+					<h3 id="obras3texto">Obra Erca</h3>
+				</li>
+				<li id="obras4">
+					<img src="DSCN3393.jpg"/>
+					<h3 id="obras4texto">Obra Exal Itupeva</h3>
+				</li>
+				<li id="obras5">
+					<img src="obra5foto1.jpg"/>
+					<h3 id="obras5texto">Obra M3</h3>
+				</li>
+				<li id="obras6">
+					<img src="obra6foto1.jpg"/>
+					<h3 id="obras6texto">Obra Serbom</h3>
+				</li>
+				<li id="obras7">
+					<img src="obra7foto1.jpg"/>
+					<h3 id="obras7texto">Obra Bauducco</h3>
+				</li>
+				<li id="obras8">
+					<img src="obra8foto1.jpg"/>
+					<h3 id="obras8texto">Loteamentos</h3>
+				</li>
+				<li id="obrasvermobile">
+					<p>Ver</p>
+				</li>		
+			</ul>
+		</section>
+
+		<!-- GALERIA DE FOTOS !-->
+		<div id="galeriadefotos">
+		</div>
+		<div id="galeriadefotosinner">
+			<img id="fotogaleria"></img>
+			<img id="fechargaleria" src="closebutton.png"></img>
+			<div id="galeriasetaesquerda">
+					<img src="slideshowarrowleft.png"/>
+			</div>
+			<div id="galeriasetadireita">
+					<img src="slideshowarrowright.png"/>
+			</div>
+			<div id="galeriadefotosinnerinner0">
+				<div id="botaoesconder">
+					<img id="botaoesconder2" src="hidebutton.png"/>
+				</div>
+				<div id="galeriadefotosinnerinner">
+					<h3 class="fontetextogaleria" id="titulogaleria"></h3>
+					<p id="textogaleria"></p>
+				</div>
+				<div id="galeriadefotosinnerinner2">
+					<h3 class="fontetextogaleria">Trocar obra:</h3>
+					<select id="caixadeopcoes">
+					</select>
+					<h3 class="fontetextogaleria">Escolher foto:</h3>
+					<select id="caixadeopcoes2">
+					</select>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="textoObras.js"></script>
+		<script type="text/javascript" data-src="scriptobras.js" id="scObras"></script>
+
+		<!--  GALERIA DE FOTOS MOBILE !-->
+		<table id="menugaleriamobile">
+			<tr>
+				<td><img id="fechargalmobile" src="slideshowarrowleft.png"/></td>
+				<td><h10>Obras Realizadas</h10></td>
+			</tr>
+		</table>
+
+		<div id="galeriadefotosmobile">
+			<ul id="listadefotosmobile">
+				
+			</ul>
+		</div>
+		<div id="slideshowMobileFotoDiv">
+		</div>
+		<ul id="slideshowMobilePropriamente">
+			
+		</ul>
+		<!--<img id="slideshowMobileFoto"/>!-->
+		<img id="fechargaleriamobile" src="closebutton.png"/>
+		<script id="scObrasMobile" type="text/javascript" data-src="scriptGaleriaMobile.js"></script>
+		
+		
+
+		<!--   CONTATO   !-->
+		<section id="contato">
+			<a id="cont"></a>
+			<h2>Contato</h2>
+			<ul>
+				<li>
+					<iframe id="mapaGoogle" data-src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14674.448609464236!2d-47.0238703!3d-23.1478478!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4a2c3cb582f693af!2sAlex+Andr%C3%A9+Terraplenagem!5e0!3m2!1spt-BR!2sbr!4v1511809293101" frameborder="0" style="border:0" allowfullscreen></iframe>
+				</li>
+				<li id="contatoinfo">
+					<h3>
+						Entre em contato para maiores informações:
+					</h3>
+					<br>	
+					<p>	
+						Endereço:<br>
+						Rua Akzo Nobel, 200<br>
+						Itupeva, SP 13295-000<br><br>
+						E-mail:<br>
+						correio@alexandreterraplenagem.com.br<br><br>
+						Telefone:<br>
+						(11) 4591-1192
+					</p>
+				</li>
+			</ul>
+	
+		</section>
+
+
+		<!-- RODAPE !-->
+		<footer>
+			<img src="logofirma.jpg"/>
+			<h16>Copyright 2022 ALEX ANDRE Terraplenagem</h16>
+		</footer>
+		
+		<script type="text/javascript" src="scriptMenu.js"></script>
+		<script type="text/javascript" src="scriptstyle.js"></script>
+		<!--<script type="text/javascript" src="scriptCarregarImagens.js"></script>!-->
+
+	</body>
+
+</html>	

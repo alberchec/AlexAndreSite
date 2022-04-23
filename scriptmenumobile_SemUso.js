@@ -1,0 +1,47 @@
+function abrirmenu(){
+	if(window.innerWidth<=980){
+		document.getElementById("navmenu").style.display="block";
+		document.getElementById("fundomobile").style.display="block";
+		document.getElementById("menumobile").style.display="none";
+		document.getElementById("closemenumobile").style.display="block";
+	}
+}
+function fecharmenu(){
+	if(window.innerWidth<=980){
+		document.getElementById("navmenu").style.display="none";
+		document.getElementById("fundomobile").style.display="none";
+		document.getElementById("menumobile").style.display="block";
+		document.getElementById("closemenumobile").style.display="none";
+	}
+}
+document.getElementById("menumobile").onclick=function(){
+	abrirmenu();
+}
+document.getElementById("hom2").onclick=function(){
+	fecharmenu();
+}
+document.getElementById("aempr2").onclick=function(){
+	fecharmenu();
+}
+document.getElementById("serv2").onclick=function(){
+	fecharmenu();
+}
+document.getElementById("obrasreal2").onclick=function(){
+	fecharmenu();
+}
+document.getElementById("cont2").onclick=function(){
+	fecharmenu();
+}
+document.getElementById("closemenumobile").onclick=function(){
+	fecharmenu();
+}
+function aomudartamanhoSMM(){
+	if(window.innerWidth>980){
+		document.getElementById("menumobile").style.display="none";
+		document.getElementById("closemenumobile").style.display="none";
+		document.getElementById("navmenu").style.display="block";
+	}else{
+		document.getElementById("menumobile").style.display="block";
+		document.getElementById("navmenu").style.display="none";
+	}
+};

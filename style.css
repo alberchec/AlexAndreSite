@@ -1,0 +1,1105 @@
+body {
+	display:none;
+ 	background-color:white;
+ 	margin:0;
+ 	padding:0;
+ }
+
+/* CABEÇALHO E MENU */
+
+ header {
+  z-index:8;
+  position: fixed;
+  width: 100%;
+  /*height:100px;*/
+  line-height: 60px;
+  background: white;
+  color: white;
+  margin:0;
+  padding:0;
+  box-shadow:0 0.1px 5px #555353; 
+}
+#imagemlogo {
+	position:absolute;
+	left:10%;
+	/*width:200px;
+	height:94px;*/
+	/*margin:5px;*/
+	padding:0;
+}
+header nav {
+	position:absolute;
+	right:10vw;
+	/*top:12px;*/
+	/*height:60px;*/
+}
+#menumobile, #closemenumobile{
+	display:none;
+}
+header nav ul li {
+	float:left;
+	list-style:none;
+	/*padding-top:27px;*/
+	padding-left:4vw;
+	padding-right:0;
+}
+header nav ul li a {
+	display:block;
+	color:#555353;
+	font-family:"avenir";
+	font-weight:normal;
+	font-size:1.25vw;
+	text-decoration:none;
+	/*padding:0 1vw;*/
+	-o-transition:.3s;
+ 	-ms-transition:.3s;
+ 	-moz-transition:.3s;
+ 	-webkit-transition:.3s;
+ 	transition:.8s;
+}
+.menu:hover {
+	color:#d3d3d3;
+	cursor:pointer;
+	-o-transition:.3s;
+ 	-ms-transition:.3s;
+ 	-moz-transition:.3s;
+ 	-webkit-transition:.3s;
+ 	transition:.3s;
+}
+#logao:hover {
+	cursor:pointer;
+}
+#fundomobile{
+	display:none;
+}
+
+
+/* SLIDESHOW */
+
+#slideshow {
+	position:relative;
+	width:100%;/*era vw*/
+	height:100vh;
+	margin:0;
+	padding:0;
+	overflow:hidden;
+}
+#slidebotao{
+	position:absolute;
+	z-index:2;
+	top:92vh;
+	left:48vw;
+	margin:0;
+	padding:0;
+}
+#botao1div, #botao2div, #botao3div {
+	float:left;
+	/*width:.8vw;
+	height:1vw;
+	margin-right:1vw;
+	padding-right:.1vw;
+	padding-left:.1vw;*/
+	background-color:white;
+	/*border-radius:100px;*/
+	box-shadow: 2px 2px 10px #9f9f9f;
+	cursor:pointer;
+	transition:1s;
+}
+#botao1, #botao2, #botao3 {
+	opacity:0;
+}
+#botao1:hover, #botao2:hover, #botao3:hover {
+	cursor:pointer;
+}
+#slideshowsetaesquerda {
+	position:absolute;
+	top:52vh;
+	left:5vw;
+	z-index:2;
+	opacity:0.7;
+	transition:0.3s;
+}
+#slideshowsetadireita {
+	position:absolute;
+	top:52vh;
+	right:5vw;
+	z-index:3;
+	opacity:0.7;
+	transition:0.3s;
+}
+#slideshowsetaesquerda:hover, #slideshowsetadireita:hover {
+	opacity:1;
+	cursor:pointer;
+	transition:0.1s;
+	transform:scale(1.2);
+}
+#slide1, #slide2, #slide3{
+	position:absolute;
+	height:100vh;
+	width:100vw;
+	margin:0;
+	padding:0;
+	overflow:hidden;
+	-o-transition:2s;
+ 	-ms-transition:2s;
+ 	-moz-transition:2s;
+ 	-webkit-transition:2s;
+	transition:2s;
+}
+#slide2, #slide3 {
+	left:100vw;
+}
+#slidefoto1, #slidefoto2, #slidefoto3 {
+	position:relative;
+	margin:0;
+	padding:0;
+}
+#slideshow .slidetexto{
+	position:absolute;
+	z-index:4;
+	-o-transition:1s;
+ 	-ms-transition:1s;
+ 	-moz-transition:1s;
+ 	-webkit-transition:1s;
+	transition:1s;
+}
+#slideshow h6{
+	font-size:2.6vw;
+	font-family:"helvetica neue";
+	font-style:italic;
+	font-weight:lighter;
+	color:white;
+	padding:0;
+	margin:0;
+	margin-top:1vh;
+	background-color:#41800e;
+}
+#slidetexto1{
+	width:35vw;
+	right:2vw;
+	top:25vh;
+}
+.textoslide1{
+	float:right;
+	text-align:right;
+}
+#slidetexto2{
+	opacity:0;
+	width:20vw;
+	top:40vh;
+	left:50vw;
+}
+.textoslide2{
+	float:right;
+	left:50%;
+	transform:translate(-50%);
+}
+#slidetexto3{
+	opacity:0;
+	width:30vw;
+	top:50vh;
+	left:53vw;
+}
+.textoslide3{
+	float:left;
+	left:50%;
+	transform:translate(-50%);
+}
+
+/* A EMPRESA */
+
+#aempr{
+	display:block;
+	position:relative;
+	/*top:-120px;*/
+}
+#aempresa {
+	background-color:white;
+	margin-top:3vh;
+	/*margin-left:10%;
+	margin-right:5%;*/
+}
+#aempresa h2{
+	margin-left:10vw;
+}
+h2 {
+	font:italic lighter 44px georgia;
+	text-decoration:underline;
+	color:#706962;
+	margin-top:3vh;
+	margin:0;
+	padding:0;
+}
+p {
+	font-family:"helvetica light";
+	font-size:1.3vw;
+	text-align:justify;
+	margin:0;
+	padding:0;
+}
+#aempresa #aempresafoto1{
+	float:left;
+	width:42vw;
+	height:20vw;
+	margin:0;
+	padding:0;
+	margin-top:4vh;
+	margin-right:5vw;
+}
+#aempresa div #img1{
+	position:relative;
+	z-index:0;
+	width:30vw;
+	height:auto;
+	top:0;
+	left:-15%;
+	box-shadow:0px 0px 20px #000000;
+	opacity:0.8;
+}
+#aempresa div #img2{
+	position:relative;
+	z-index:1;
+	width:30vw;
+	height:auto;
+	top:-60%;
+	left:0;
+	box-shadow:0px 0px 30px #000000;
+	opacity:0.95;
+}
+#aempresa div #img3{
+	position:relative;
+	z-index:-1;
+	width:10vw;
+	height:auto;
+	top:-150%;
+	left:-15%;
+}
+#aempresa #aempresafoto2{
+	float:right;
+	width:42vw;
+	height:20vw;
+	margin:0;
+	padding:0;
+}
+#aempresa div #img4{
+	position:relative;
+	z-index:-1;
+	width:25vw;
+	height:auto;
+	top:-30%;
+	left:30%;
+	box-shadow:0px 0px 10px #696969;
+	opacity:0.6;
+}
+#aempresa div #img5{
+	position:relative;
+	z-index:0;
+	width:15vw;
+	height:auto;
+	top:-20%;
+	left:-50%;
+	box-shadow:0px 0px 20px #696969;
+	opacity:0.8;
+}
+#aempresa div #img6{
+	position:relative;
+	z-index:1;
+	width:25vw;
+	height:auto;
+	top:-70%;
+	left:40%;
+	box-shadow:0px 0px 30px #000000;
+	opacity:0.9;
+}
+#aempresa ul{
+	margin:0;
+	margin-top:4vh;
+	padding:0;
+}
+#aempresa ul li{
+	float:left;
+	list-style:none;
+	width:32vw;
+	margin-right:0%;
+	margin-bottom:10%;
+}
+#aempresatexto2{
+	padding-top:10vh;
+	padding-bottom:5vh;
+}
+.elementoadireita{
+	float:right;
+}
+div ul li img{
+	width:100%;
+}
+
+/* SERVIÇOS PRESTADOS */
+
+#serv{
+	display:block;
+	position:relative;
+	/*top:-120px;*/
+}
+#servicos {
+	margin:0;
+	padding:0;
+	padding-top:3vh;
+	padding-bottom:4vh;
+	/*padding-left:10vw;
+	padding-right:10vw;*/
+	clear:both;
+	background-color:#f2f2f2;
+	overflow:hidden;
+}
+#servicos ul{
+	margin:0;
+	padding:0;
+}
+#servicos ul li {
+	float:left;
+	list-style:none;
+	/*width:23.79vw;
+	height:25vw;*/
+	margin:0;
+	padding:0;
+	margin-top:1vh;
+	margin-bottom:2vh;
+	margin-right:0.66%;/*era vw*/
+	margin-left:0.66%;/*era vw*/
+	padding:1%;/*era vw*/
+	background-color:#ffffff;
+	box-shadow:2px .5px 5px #ababab;
+}
+/*
+#servicos ul li:hover{
+	box-shadow:2px 1px 20px #545454;
+	-o-transition:.3s;
+ 	-ms-transition:.3s;
+ 	-moz-transition:.3s;
+ 	-webkit-transition:.3s;
+ 	transition:.3s;
+}*/
+#servicos ul li img {
+	width:100%;
+}
+h3 {
+	font:italic lighter 1.3vw georgia;
+	text-align:center;
+	color:#706962;
+	margin:0;
+	padding:0;
+	margin-top:1vh;
+	margin-bottom:1vh;
+}
+#servicos ul li p {
+	font-size:1vw;
+}
+
+/* OBRAS REALIZADAS */
+
+#obrasreal{
+	display:block;
+	position:relative;
+	/*top:-120px;*/
+}
+#obras {
+	background-color:white;
+	margin:0;
+	padding:0;
+	margin-top:3vh;
+	margin-bottom:6vh;
+	clear:both;
+	overflow:hidden;
+}
+#obras h2 {
+	margin:0;
+	margin-left:10%;
+	padding:0;
+}
+#obras ul {
+	margin:.8%;/*era vw*/
+	margin-top:2vh;
+	margin-bottom:4vh;
+	padding:0;
+}
+#obras ul li {
+	float:left;
+	/*width:24.2vw;
+	height:20vw;*/
+	padding:0;
+	margin:.2%;/*era vw*/
+	/*box-shadow:2px 2px 5px #0a0a0a;*/
+	overflow:hidden;
+	/*-o-transition:.8s;
+ 	-ms-transition:.8s;
+ 	-moz-transition:.8s;
+ 	-webkit-transition:.8s;
+ 	transition:.8s;*/
+}
+#obras ul li:hover{
+	cursor:pointer;
+	-o-transition:.3s;
+ 	-ms-transition:.3s;
+ 	-moz-transition:.3s;
+ 	-webkit-transition:.3s;
+ 	transition:.3s;
+}
+#obras ul li img {
+	/*max-height:100%;
+	width:auto;*/
+	margin:0;
+	padding:0;
+	z-index:0;
+}
+#obras ul li img:hover {
+	opacity:0.7; 
+}
+#obras ul li h3 {
+	opacity:0;
+	position:relative;
+	z-index:2;
+	top:-10vh;
+	padding:0;
+	margin:0;
+	font-size:2vw;
+	font-family:"helvetica neue";
+	font-style:normal;  
+	color:white;
+	background-color:rgba(0,0,0,0.7); 
+	-o-transition:.3s;
+ 	-ms-transition:.3s;
+ 	-moz-transition:.3s;
+ 	-webkit-transition:.3s;
+ 	transition:.3s;
+}
+#obras ul li h3:hover {
+	opacity:1;
+}
+
+/* GALERIA DE FOTOS */
+#galeriadefotos{
+	display:none;
+	position:fixed;
+	width:100vw;
+	height:100vh;
+	background-color:rgba(0,0,0,0.5);
+	margin:0;
+	top:0;
+	z-index:9;
+}
+/*#galeriadefotos h3{
+	position:absolute;
+	right:50vw;
+	margin-right:-48.5vmin;
+	top:0vh;
+	color:black;
+	font-family:"helvetica";
+	font-style:normal; 
+	font-weight:bolder;
+	cursor:pointer;
+	background-color:white;
+}*/
+#fechargaleria{
+	position:absolute;
+	top:0;
+	right:0;
+	height:5vh;
+	opacity:0.3;
+	-o-transition:.2s;
+ 	-ms-transition:.2s;
+ 	-moz-transition:.2s;
+ 	-webkit-transition:.2s;
+ 	transition:.2s;
+}
+#fechargaleria:hover{
+	cursor:pointer;
+	opacity:1;
+	background-color:rgba(255,255,255,0.5);
+	height:6vh;
+	-o-transition:.2s;
+ 	-ms-transition:.2s;
+ 	-moz-transition:.2s;
+ 	-webkit-transition:.2s;
+ 	transition:.2s;
+}
+#galeriadefotosinner{
+	display:none;
+	position:fixed;
+	max-width:100vw;
+	max-height:95vh;
+	/*background-color:white;*/
+	margin-top:5vh;
+	left:50vw;
+	transform:translate(-50%);
+	padding:0;
+	top:0;
+	z-index:10;
+	/*overflow:scroll;*/
+}
+/*#galeriadefotosinner{
+	display:none;
+	position:fixed;
+	width:50%;
+	background-color:white; 
+	margin-top:5vh;
+	margin-left:25%;
+	padding:1%;
+	padding-bottom:1vh;
+	top:0;
+	z-index:10;
+	overflow:scroll;
+}*/
+#galeriadefotosinner img{
+	max-width:100vw;
+	max-height:95vh;
+}
+.fontetextogaleria {
+	font-family:"helvetica";
+	font-style:normal; 
+}
+#galeriasetaesquerda {
+	position:absolute;
+	top:37vh;
+	left:1.5vw;
+	z-index:8;
+	transition:0.3s;
+}
+#galeriasetadireita {
+	position:absolute;
+	top:37vh;
+	right:1.5vw;
+	z-index:8;
+	transition:0.3s;
+}
+#galeriasetaesquerda:hover, #galeriasetadireita:hover {
+	background-color:rgba(255,255,255,0.7);
+	cursor:pointer;
+	transition:0.1s;
+	transform:scale(1.2);
+}
+#galeriadefotosinnerinner0 {
+	position:absolute;
+	background-color:white;
+	padding:1%;
+	bottom:0;
+	width:98%;
+}
+#botaoesconder{
+	position:absolute;
+	background-color:white;
+	top:-2.1vh;
+	height:2vh;
+	width:10vh;
+	left:50%;
+	transform:translate(-50%);
+	border-top-left-radius:1vh;
+	border-top-right-radius:1vh;
+	border-bottom:0.1vh solid black;
+}
+#botaoesconder:hover{
+	cursor:pointer;
+
+}
+#botaoesconder img{
+	padding-top:5%;
+	padding-bottom:10%;
+	height:60%;
+	width:100%;
+}
+#galeriadefotosinnerinner {
+	float:left;
+	width:70%;
+	min-height:15vh;
+	border-right-style:solid;
+	border-right-width:1px;
+	margin-bottom:1vh;
+	margin-top:1vh;
+}
+#galeriadefotosinnerinner h3{
+	padding:0;
+	margin:0;
+}
+#textogaleria {
+	font-size:1vw;
+	padding-right:1vw;
+	padding-top:1vh;
+}
+#caixadeopcoes{
+	display:block;
+	margin:auto;
+	margin-top:1vh;
+	width:25%;
+}
+#caixadeopcoes2{
+	display:block;
+	margin:auto;
+	margin-top:1vh;
+}
+
+/* GALERIA DE FOTOS MOBILE */
+table{
+	display:none;
+	position:fixed;
+	top:0;
+	z-index:1000;
+	margin:0;
+	padding:0;
+	background-color:white;
+	box-shadow:0 2px 5px #aaa;
+	width:100%;
+}
+table tr td{
+	margin:0;
+	padding:0;
+	height:10vh;
+}
+table tr td img{
+	height:100%;
+	border-right:1px solid #555;
+	cursor:pointer;
+}
+table tr td h10{
+	font-size:5vh;
+	color:#555;
+	text-align:center;
+}
+#galeriadefotosmobile{
+	display:none;
+	position:fixed;
+	top:10vh;
+	z-index:999;
+	margin:0;
+	padding:0;
+	padding-left:3vw;
+	width:100%;
+	height:93%;
+	background-color:white;
+	overflow:scroll;
+	-webkit-overflow-scrolling:touch;
+}
+h11{
+	font-size:4vh;
+	text-decoration:underline;
+}
+#listadefotosmobile{
+	margin:0;
+	margin-top:2vh;
+	padding:0;
+}
+#listadefotosmobile li{
+	list-style:none;
+}
+.listainternamobile{
+	padding:2vw;
+	margin-bottom:3vh;
+	width:90vw;
+	background-color:#fff;
+	box-shadow:1px 1px 5px #aaa;
+	border-radius:1%;
+}
+.listainternamobile ul{
+	height:72vw;
+	cursor:pointer;
+	margin:0;
+	padding:0;
+}
+.listainternamobile ul li{
+	float:left;
+	overflow:hidden;
+	list-style:none;
+	margin:0;
+	padding:0;
+	margin-bottom:0.5vh;
+}
+#galeriadefotosmobile p{
+	font-size:3vh;
+}
+#listadefotosmobile img{
+	display:block;
+	margin:0;
+	padding:0;
+	/*width:90vw;*/
+}
+.listaMobileObraFotoslista{
+	position:relative;
+}
+.VerMaisMobileGaleria{
+	position:absolute;
+	z-index:2000;
+	top:50%;
+	left:50%;
+	transform:translate(-50%, -50%);
+	font-size:8vw;
+	font-family:"avenir";
+	opacity:1;
+	background-color:rgba(255,255,255,0.5);
+	border-radius:5px;
+	box-shadow:0px 0px 50px white;
+}
+#slideshowMobileFotoDiv{
+	display:none;
+	position:fixed;
+	top:0;
+	z-index:1500;
+	height:100%;
+	width:100%;
+	background-color:rgba(0,0,0,0.8);
+}
+#slideshowMobilePropriamente{
+	display:none;
+	position:fixed;
+	z-index:1600;
+	top:0;
+	width:100%;
+	height:100%;
+	overflow:scroll;
+	-webkit-overflow-scrolling:touch;
+	margin:0;
+	margin-top:1vh;
+	padding:0;
+}
+#slideshowMobilePropriamente li img{
+	max-width:100vw;
+	max-height:100vh;
+	margin-bottom:1vh;
+}
+#fechargaleriamobile{
+	display:none;
+	position:fixed;
+	z-index:1700;
+	top:0;
+	right:0;
+	height:7vmax;
+	cursor:pointer;
+	background-color:rgba(255,255,255,0.5);
+}
+
+
+/* CONTATO */
+
+#cont{
+	display:block;
+	position:relative;
+	/*top:-120px;*/
+}
+#contato {
+	margin:0;
+	padding-top:3vh;
+	padding-bottom:10vh;
+	padding-left:10vw;
+	padding-right:10vw;
+	clear:both;
+	background-color:#f2f2f2;
+	overflow:hidden;
+}
+#contatolista ul {
+	margin:0;
+	margin-top:4vh;
+	padding:0;
+	z-index:2;
+}
+#contato ul{
+	margin:0;
+	margin-top:4vh;
+	padding:0;
+}
+#contato ul li {
+	float:left;
+	list-style:none; 
+	margin:0;
+	padding:0;
+}
+#contato #contatoinfo {
+	margin-left:12vw;
+	margin-top:0vh;
+}
+#contato ul li iframe{
+	margin:0;
+	padding:0;
+	width:33vw;
+	height:25vw;
+	box-shadow:2px 2px 5px #000000;
+}
+#contato ul li h3 {
+	font-size:1.5vw;
+	font-family:helvetica;
+	font-style:normal;
+	text-align:left;
+	color:black;
+}
+#contato ul li p {
+	font-size:1.2vw;
+	color:black;
+}
+
+/* RODAPE */
+footer{
+	position:relative;
+	background-color:#444444;
+	z-index:1;
+	width:100%;
+	height:4.5vw;
+	padding-bottom:1vh;
+	/*height:5.5vw;*/
+}
+footer img{
+	display:block;
+	/*position:relative;*/
+	width:10vw;
+	height:auto;
+	margin:0;
+	margin-left:10vw;
+	/*top:.4vw;*/
+}
+h16{
+	position:absolute;
+	top:50%;
+	left:57%;
+	transform:translate(-50%,-50%);
+	color:white;
+	font-family:arial;
+	font-size:2vh;
+	text-shadow:0 .5px 1px black;
+}
+
+/* ESTILO PARA MOBILE */
+/*@media only screen and (max-width:700px){
+
+ CABECALHO E MENU 
+#menumobile, #closemenumobile{
+	position:absolute;
+	top:7vw;
+	right:3vw;
+	width:10vw;
+	margin:0;
+	padding:0;
+	z-index:6;
+}
+#menumobile{
+	display:block;
+}
+#menumobile:hover, #closemenumobile:hover{
+	cursor:pointer;
+}
+header nav{
+	display:none;
+	right:3vw;
+	width:70vw;
+	padding-top:10vh;
+}
+header nav ul li {
+	float:none;
+	padding-left:0vw;
+	padding-bottom:3vh; 
+}
+header nav ul li a {
+	font-size:7vw;
+	padding:0 1vw;
+}
+#fundomobile{
+	position:fixed;
+	width:75vw;
+	height:100%;
+	right:0;
+	z-index:5;
+	background-color:white;
+	overflow:hidden;
+	box-shadow:-2px 0 5px #aaa; 
+}
+
+ SLIDESHOW 
+#slideshow h6{
+	font-size:5vw;
+}
+#slidetexto1{
+	width:80vw;
+	right:10vw;
+	top:50vh;
+}
+.textoslide1{
+	float:right;
+	text-align:right;
+}
+#slidetexto2{
+	opacity:0;
+	width:50vw;
+	top:40vh;
+	left:20vw;
+}
+.textoslide2{
+	float:right;
+	margin:auto;
+	text-align:center;
+}
+#slidetexto3{
+	opacity:0;
+	width:70vw;
+	top:50vh;
+	left:39vw;
+}
+.textoslide3{
+	float:left;
+	margin:auto;
+	text-align:center;
+}
+
+ A EMPRESA 
+
+#aempresa {
+	margin-left:3%;
+	margin-right:3%;
+}
+h2 {
+	font-size:;
+}
+p {
+	font-size:5vw;
+}
+#aempresa #aempresafoto1{
+	float:none;
+	width:auto;
+	height:70vw;
+	margin:auto;
+	padding:0;
+	margin-top:4vh;
+	margin-right:5vw;
+}
+#aempresa div #img1{
+	width:70vw;
+	top:0;
+	left:0%;
+}
+#aempresa div #img2{
+	width:70vw;
+	top:-30%;
+	left:25%;
+}
+#aempresa div #img3{
+	width:20vw;
+	top:-115%;
+	left:80%;
+	z-index:2;
+}
+#aempresa #aempresafoto2{
+	width:90vw;
+	height:90vw;
+	margin:auto;
+}
+#aempresa div #img4{
+	width:70vw;
+	top:0%;
+	left:10%;
+}
+#aempresa div #img5{
+	width:40vw;
+	top:-40%;
+	left:0%;
+}
+#aempresa div #img6{
+	width:70vw;
+	top:-80%;
+	left:20%;
+}
+div ul{
+	margin-top:2vh;
+}	
+div ul li{
+	float:none;
+	width:94vw;
+	margin-bottom:3%;
+}
+#aempresatexto2{
+	padding-top:10vh;
+	padding-bottom:5vh;
+}
+
+ SERVIÇOS PRESTADOS 
+
+#servicos {
+	padding-top:3vh;
+	padding-bottom:4vh;
+	padding-left:3vw;
+	padding-right:3vw;
+}
+#servicos ul li {
+	float:left;
+	width:90vw;
+	height:98vw;
+	margin-top:1vh;
+	margin-bottom:2vh;
+	margin-right:0;
+	padding:2vw;
+}
+h3 {
+	font:italic lighter 5vw georgia;
+}
+#servicos ul li p {
+	font-size:4vw;
+}
+
+ OBRAS REALIZADAS 
+
+#obras {
+	margin-top:3vh;
+	margin-bottom:4vh;
+}
+#obras h2 {
+	margin-left:3%;
+}
+#obras ul {
+	margin:3vw;
+	margin-top:2vh;
+	margin-bottom:0vh;
+	padding:0;
+}
+#obras ul li {
+	width:94vw;
+	height:77.7vw;
+	padding:0vw;
+	margin:0;
+	margin-bottom:1vh;
+}
+#obras ul li h3 {
+	font-size:5vw;
+}
+
+ CONTATO 
+
+#contato {
+	padding-top:3vh;
+	padding-bottom:10vh;
+	padding-left:3vw;
+	padding-right:3vw;
+}
+#contatolista ul {
+	margin:0;
+	margin-top:4vh;
+	padding:0;
+}
+#contato ul li {
+	float:none;
+	margin:0;
+}
+#contato #contatoinfo {
+	margin-left:0vw;
+	margin-top:4vh;
+}
+#contato ul li iframe{
+	width:94vw;
+	height:71vw;
+}
+#contato ul li h3 {
+	font-size:4vw;
+}
+#contato ul li p {
+	font-size:4vw;
+}
+
+ RODAPE 
+footer img{
+	width:33vw;
+	margin:auto;
+}
+
+}*/
