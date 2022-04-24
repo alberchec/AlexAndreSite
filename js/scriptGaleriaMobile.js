@@ -11,9 +11,9 @@ for(i=8;i>0;i=i-1){
 	/* COLOCANDO AS RESPECTIVAS FOTOS NA LISTA, SEM O INCONVENIENTE VALOR DA VARIAVEL INICIAL */
 	for(j=fotosloop;j>0;j=j-1){
 		if(j==fotosloop){
-			listaMobileFotos="<li id='listaMobileObra"+i+"Foto"+j+"' class='listaMobileObraFotoslista'><h15 class='VerMaisMobileGaleria'>Ver +</h15><img src='mobileobrasfotostexto/imagensborradas/obra"+i+"foto"+j+".jpg'/></li>";
+			listaMobileFotos="<li id='listaMobileObra"+i+"Foto"+j+"' class='listaMobileObraFotoslista'><h15 class='VerMaisMobileGaleria'>Ver +</h15><img src='GalleryMobile/BlurImg/obra"+i+"foto"+j+".jpg'/></li>";
 		}else{
-			listaMobileFotos="<li id='listaMobileObra"+i+"Foto"+j+"' class='listaMobileObraFotoslista'><img src='mobileobrasfotostexto/obra"+i+"foto"+j+".jpg'/></li>"+listaMobileFotos;
+			listaMobileFotos="<li id='listaMobileObra"+i+"Foto"+j+"' class='listaMobileObraFotoslista'><img src='GalleryMobile/obra"+i+"foto"+j+".jpg'/></li>"+listaMobileFotos;
 		};
 	};
 	/* COLOCANDO TODAS AS OBRAS EM FORMA DE LISTA */
@@ -94,7 +94,7 @@ function slideshowMobileObras(i){
 		document.getElementById("fechargaleriamobile").style.display="block";
 		determinarFotosSlideShowMobile(i);
 		document.getElementById("galeriadefotosmobile").style.overflow="hidden";
-		//document.getElementById("slideshowMobileFoto").src="mobileobrasfotostexto/obra"+i+"foto1.jpg";
+		//document.getElementById("slideshowMobileFoto").src="GalleryMobile/obra"+i+"foto1.jpg";
 	};
 };
 for(i=1;i<=8;i++){
@@ -118,9 +118,9 @@ function determinarFotosSlideShowMobile(i){
 	for(j=qtdFotosporObra[i];j>0;j=j-1){
 		var fotosSlideShowMobileProp;
 		if(j==qtdFotosporObra[i]){
-			fotosSlideShowMobileProp="<li><img src='mobileobrasfotostexto/obra"+i+"foto"+j+".jpg'/></li>";
+			fotosSlideShowMobileProp="<li><img src='GalleryMobile/obra"+i+"foto"+j+".jpg'/></li>";
 		}else{
-			fotosSlideShowMobileProp="<li><img src='mobileobrasfotostexto/obra"+i+"foto"+j+".jpg'/></li>"+fotosSlideShowMobileProp;
+			fotosSlideShowMobileProp="<li><img src='GalleryMobile/obra"+i+"foto"+j+".jpg'/></li>"+fotosSlideShowMobileProp;
 		};
 		document.getElementById("slideshowMobilePropriamente").innerHTML=fotosSlideShowMobileProp;
 	};
