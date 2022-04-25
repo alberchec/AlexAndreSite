@@ -231,7 +231,8 @@ h2 {
 	padding:0;
 }
 p {
-	font-family:"helvetica light";
+	font-family:"helvetica neue";
+	font-weight: 300;
 	font-size:1.3vw;
 	text-align:justify;
 	margin:0;
