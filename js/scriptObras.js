@@ -26,7 +26,7 @@ function handleElement(j){
 		if(window.innerWidth>360*razaopixels){
 			document.getElementById("galeriadefotos").style.display="block";
 			document.getElementById("galeriadefotosinner").style.display="block";
-			document.getElementById("fotogaleria").src="Gallery/obra"+j+"foto1.jpg";
+			document.getElementById("fotogaleria").src="Images/Gallery/obra"+j+"foto1.jpg";
 			document.getElementById("textogaleria").innerHTML=txtobras[j];
 			document.getElementById("caixadeopcoes").value=j;
 			numFoto=1;
@@ -60,7 +60,7 @@ document.getElementById("caixadeopcoes").onchange=function(){
 };
 function mudarobra123(){
 	var caixaValue=parseInt(document.getElementById("caixadeopcoes").value);
-	document.getElementById("fotogaleria").src="Gallery/obra"+caixaValue+"foto1.jpg";
+	document.getElementById("fotogaleria").src="Images/Gallery/obra"+caixaValue+"foto1.jpg";
 	document.getElementById("textogaleria").innerHTML=txtobras[caixaValue];
 	gerarNumfotos();
 	titgal(caixaValue);
@@ -106,7 +106,7 @@ function setas(k){
 			caixaValue5=qtdFotosporObra[k];
 		};
 	};
-	document.getElementById("fotogaleria").src="Gallery/obra"+k+"foto"+caixaValue5+".jpg";
+	document.getElementById("fotogaleria").src="Images/Gallery/obra"+k+"foto"+caixaValue5+".jpg";
 	/* SETAR CAIXA DE SELECAO DAS FOTOS */
 	document.getElementById("caixadeopcoes2").value=caixaValue5;	
 };
@@ -137,7 +137,7 @@ function gerarNumfotos(){
 document.getElementById("caixadeopcoes2").onchange=function(){
 	var caixaValue3=document.getElementById("caixadeopcoes2").value;
 	var caixaValue4=document.getElementById("caixadeopcoes").value;
-	document.getElementById("fotogaleria").src="Gallery/obra"+caixaValue4+"foto"+caixaValue3+".jpg";
+	document.getElementById("fotogaleria").src="Images/Gallery/obra"+caixaValue4+"foto"+caixaValue3+".jpg";
 };
 
 /* SETAR TITULO DA GALERIA DE IMAGENS */
@@ -151,12 +151,12 @@ document.getElementById("botaoesconder").onclick=function(){
 		document.getElementById("galeriadefotosinnerinner").style.display="block";
 		document.getElementById("galeriadefotosinnerinner2").style.display="block";
 		document.getElementById("galeriadefotosinnerinner0").style.padding="1%";
-		document.getElementById("botaoesconder2").src="hidebutton.png";
+		document.getElementById("botaoesconder2").src="Images/hidebutton.png";
 	}else{
 		document.getElementById("galeriadefotosinnerinner").style.display="none";
 		document.getElementById("galeriadefotosinnerinner2").style.display="none";
 		document.getElementById("galeriadefotosinnerinner0").style.padding="0.2%";
-		document.getElementById("botaoesconder2").src="hidebutton2.png";
+		document.getElementById("botaoesconder2").src="Images/hidebutton2.png";
 	};
 };
 
