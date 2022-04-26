@@ -1,10 +1,12 @@
 var a;
 var b;
 var c;
+var w;
 
 a=document.getElementById("slide1");
 b=document.getElementById("slide2");
 c=document.getElementById("slide3");
+w=document.getElementById("slide4");
 
 //document.getElementById("botao1").checked=true;
 
@@ -18,27 +20,31 @@ function botao1(){
 	document.getElementById("botao1div").style.backgroundColor="#41800e";
 	document.getElementById("botao2div").style.backgroundColor="white";
 	document.getElementById("botao3div").style.backgroundColor="white";
+	document.getElementById("botao4div").style.backgroundColor="white";
 
 	/* IMAGEM */
 	a.style.left="0vw";
 	b.style.left="100vw";
 	c.style.left="100vw";
+	w.style.left="100vw";
 
 	/* TEXTO */
 	setTimeout (function(){
 		if(d==1){
-			document.getElementById("slidetexto1").style.opacity=100;
+			document.getElementById("slidetexto1").style.display="block";
 			//document.getElementById("h62").style.opacity=100;
 			//document.getElementById("h63").style.opacity=100;
 			//document.getElementById("h64").style.opacity=100;
 		}
 	}, 1000);
 
-	document.getElementById("slidetexto2").style.opacity=0;
+	document.getElementById("slidetexto2").style.display="none";
 	//document.getElementById("h66").style.opacity=0;
 
-	document.getElementById("slidetexto3").style.opacity=0;
+	document.getElementById("slidetexto3").style.display="none";
 	//document.getElementById("h68").style.opacity=0;
+
+	document.getElementById("slidetexto4").style.display="none";
 
 	/* TEMPORIZADOR DO SLIDE, BLOQUEANDO BUGS, como se usa-se um
 	relogio para liberar a execucao do slide que esta no tempo certo*/
@@ -55,27 +61,31 @@ function botao2(){
 	document.getElementById("botao1div").style.backgroundColor="white";
 	document.getElementById("botao2div").style.backgroundColor="#41800e";
 	document.getElementById("botao3div").style.backgroundColor="white";
+	document.getElementById("botao4div").style.backgroundColor="white";
 
 	/* IMAGEM */
 	a.style.left="-100vw";
 	b.style.left="0vw";
 	c.style.left="100vw";
+	w.style.left="100vw";
 
 	/* TEXTO */
 	setTimeout (function(){
 		if(d==2){
-			document.getElementById("slidetexto2").style.opacity=100;
+			document.getElementById("slidetexto2").style.display="block";
 			//document.getElementById("h66").style.opacity=100;
 		}
 	}, 1000);
 
-	document.getElementById("slidetexto1").style.opacity=0;
+	document.getElementById("slidetexto1").style.display="none";
 	//document.getElementById("h62").style.opacity=0;
 	//document.getElementById("h63").style.opacity=0;
 	//document.getElementById("h64").style.opacity=0;
 
-	document.getElementById("slidetexto3").style.opacity=0;
+	document.getElementById("slidetexto3").style.display="none";
 	//document.getElementById("h68").style.opacity=0;
+
+	document.getElementById("slidetexto4").style.display="none";
 
 	/* TEMPORIZADOR DO SLIDE, BLOQUEANDO BUGS */
 	e=e+1;
@@ -91,27 +101,71 @@ function botao3(){
 	document.getElementById("botao1div").style.backgroundColor="white";
 	document.getElementById("botao2div").style.backgroundColor="white";
 	document.getElementById("botao3div").style.backgroundColor="#41800e";
+	document.getElementById("botao4div").style.backgroundColor="white";
 
 	/* IMAGEM */
 	a.style.left="-100vw";
 	b.style.left="-100vw";
 	c.style.left="0vw";
+	w.style.left="100vw";
 
 	/* TEXTO */
 	setTimeout (function(){
 		if(d==3){
-			document.getElementById("slidetexto3").style.opacity=100;
+			document.getElementById("slidetexto3").style.display="block";
 			//document.getElementById("h68").style.opacity=100;
 		}
 	}, 1000);
 
-	document.getElementById("slidetexto1").style.opacity=0;
+	document.getElementById("slidetexto1").style.display="none";
 	//document.getElementById("h62").style.opacity=0;
 	//document.getElementById("h63").style.opacity=0;
 	//document.getElementById("h64").style.opacity=0;
 
-	document.getElementById("slidetexto2").style.opacity=0;
+	document.getElementById("slidetexto2").style.display="none";
 	//document.getElementById("h66").style.opacity=0;
+
+	document.getElementById("slidetexto4").style.display="none";
+
+	/* TEMPORIZADOR DO SLIDE, BLOQUEANDO BUGS */
+	e=e+1;
+	var f=e;
+	setTimeout(function(){if (f==e){botao4()}},7000)
+
+}
+
+/* TERCEIRO SLIDE */
+function botao4(){
+	d=4;
+	/* BOTAO */
+	document.getElementById("botao1div").style.backgroundColor="white";
+	document.getElementById("botao2div").style.backgroundColor="white";
+	document.getElementById("botao3div").style.backgroundColor="white";
+	document.getElementById("botao4div").style.backgroundColor="#41800e";
+
+	/* IMAGEM */
+	a.style.left="-100vw";
+	b.style.left="-100vw";
+	c.style.left="-100vw";
+	w.style.left="0vw";
+
+	/* TEXTO */
+	setTimeout (function(){
+		if(d==4){
+			document.getElementById("slidetexto4").style.display="block";
+			//document.getElementById("h68").style.opacity=100;
+		}
+	}, 1000);
+
+	document.getElementById("slidetexto1").style.display="none";
+	//document.getElementById("h62").style.opacity=0;
+	//document.getElementById("h63").style.opacity=0;
+	//document.getElementById("h64").style.opacity=0;
+
+	document.getElementById("slidetexto2").style.display="none";
+	//document.getElementById("h66").style.opacity=0;
+
+	document.getElementById("slidetexto3").style.display="none";
 
 	/* TEMPORIZADOR DO SLIDE, BLOQUEANDO BUGS */
 	e=e+1;
@@ -122,8 +176,9 @@ function botao3(){
 
 /* POSICIONAMENTO VERTICAL FOTOS DE SLIDE */
 document.getElementById("slide1").style.zIndex=-2;
-document.getElementById("slide2").style.zIndex=0;
-document.getElementById("slide3").style.zIndex=1;
+document.getElementById("slide2").style.zIndex=-1;
+document.getElementById("slide3").style.zIndex=0;
+document.getElementById("slide4").style.zIndex=1;
 
 /* SETAS PARA MUDANÇA DE SLIDE */
 function setadireita(){
@@ -132,16 +187,20 @@ function setadireita(){
 	}else if(d==2){
 		botao3()
 	}else if(d==3){
+		botao4()
+	}else if(d==4){
 		botao1()
 	}
 }
 function setaesquerda(){
 	if (d==1){
-		botao3()
+		botao4()
 	}else if(d==2){
 		botao1()
 	}else if(d==3){
 		botao2()
+	}else if(d==4){
+		botao3()
 	}
 }
 
@@ -153,6 +212,7 @@ var razao;
 var x=document.getElementById("slidefoto1");
 var y=document.getElementById("slidefoto2");
 var z=document.getElementById("slidefoto3");
+var wz=document.getElementById("slidefoto4");
 
 function ajustefoto(){
 	largura=document.documentElement.clientWidth;
@@ -162,35 +222,43 @@ function ajustefoto(){
 		x.style.width="100vw";
 		y.style.width="100vw";
 		z.style.width="100vw";
+		wz.style.width="100vw";
 
 		x.style.height="auto";
 		y.style.height="auto";
 		z.style.height="auto";
+		wz.style.height="auto";
 
 		var porcentop=(-(razao/1.7-1)/2*100);
 		x.style.top=porcentop+"vh";
 		y.style.top=porcentop+"vh";
 		z.style.top=porcentop+"vh";
+		wz.style.top=porcentop+"vh";
 		x.style.left=0;
 		y.style.left=0;
 		z.style.left=0;
+		wz.style.left=0;
 	}
 	if(razao<1.7){
 		x.style.height="100vh";
 		y.style.height="100vh";
 		z.style.height="100vh";
+		wz.style.height="100vh";
 
 		x.style.width="auto";
 		y.style.width="auto";
 		z.style.width="auto";
+		wz.style.width="auto";
 
 		var porcentleft=(-(1.7/razao-1)/2*100);
 		x.style.top=0;
 		y.style.top=0;
 		z.style.top=0;
+		wz.style.top=0;
 		x.style.left=porcentleft+"vw";
 		y.style.left=porcentleft+"vw";
 		z.style.left=porcentleft+"vw";
+		wz.style.left=porcentleft+"vw";
 	}
 }
 function aocarregarSSlide(){
@@ -199,6 +267,10 @@ function aocarregarSSlide(){
 }
 function aomudartamanhoSSlide(){
 	ajustefoto();
+}
+
+function link4(){
+	window.open("https://drive.google.com/file/d/1pFD79WON0kuGcXxIE3DSJtd3Rmp6UErI/view");
 }
 
 
