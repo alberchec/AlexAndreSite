@@ -185,14 +185,12 @@ header nav ul li a {
 }
 #slidetexto2{
 	width:30vw;
-	top:40vh;
-	left:50vw;
+	top:25vh;
+	right:4vw;
 }
 .textoslide2{
-	float:left;
-	text-align: center;
-	left:50%;
-	transform:translate(-50%);
+	float:right;
+	text-align: right;
 }
 #slidetexto3{
 	width:30vw;
