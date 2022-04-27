@@ -381,7 +381,7 @@ function larguraEstiloMobile(){
 		}
 		#slidebotao{
 			top:80vh;
-			left:24vw;
+			left:23vw;
 		}
 		#slideshow h6{
 			font-size:7vw;
