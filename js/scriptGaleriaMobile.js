@@ -11,7 +11,7 @@ for(i=8;i>0;i=i-1){
 	/* COLOCANDO AS RESPECTIVAS FOTOS NA LISTA, SEM O INCONVENIENTE VALOR DA VARIAVEL INICIAL */
 	for(j=fotosloop;j>0;j=j-1){
 		if(j==fotosloop){
-			listaMobileFotos="<li id='listaMobileObra"+i+"Foto"+j+"' class='listaMobileObraFotoslista'><h15 class='VerMaisMobileGaleria'>Ver +</h15><img src='Images/GalleryMobile/BlurImg/obra"+i+"foto"+j+".jpg'/></li>";
+			listaMobileFotos="<li id='listaMobileObra"+i+"Foto"+j+"' class='listaMobileObraFotoslista'><h15 class='VerMaisMobileGaleria'>&nbsp;+&nbsp;</h15><img src='Images/GalleryMobile/BlurImg/obra"+i+"foto"+j+".jpg'/></li>";
 		}else{
 			listaMobileFotos="<li id='listaMobileObra"+i+"Foto"+j+"' class='listaMobileObraFotoslista'><img src='Images/GalleryMobile/obra"+i+"foto"+j+".jpg'/></li>"+listaMobileFotos;
 		};
@@ -81,7 +81,7 @@ for(i=1;i<=8;i++){
 
 		for(j=2;j<=4;j++){
 			document.getElementById("listaMobileObra"+i+"Foto"+j).style.width="29.5vw";
-			document.getElementById("listaMobileObra"+i+"Foto"+j).style.height="30vw";
+			document.getElementById("listaMobileObra"+i+"Foto"+j).style.height="22.13vw";
 		};
 	};
 };
