@@ -16,4 +16,4 @@ entre outros.";
 
 var txtobras=["", textoobra1, textoobra2, textoobra3, textoobra4, textoobra5, textoobra6, textoobra7, textoobra8];
 
-var qtdFotosporObra=[0,5,7,7,2,7,1,2,4];
+var qtdFotosporObra=[0,5,7,9,6,7,5,2,4];
