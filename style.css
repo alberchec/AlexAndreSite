@@ -231,7 +231,7 @@ header nav ul li a {
 	margin-left:10vw;
 }
 h2 {
-	font:italic lighter 44px georgia;
+	font:44px Avenir;
 	text-decoration:underline;
 	color:#706962;
 	margin-top:3vh;
@@ -670,6 +670,7 @@ table tr td img{
 }
 table tr td h10{
 	font-size:5vh;
+	font-family: Avenir;
 	color:#555;
 	text-align:center;
 }
@@ -689,6 +690,7 @@ table tr td h10{
 }
 h11{
 	font-size:4vh;
+	font-family: Avenir;
 	text-decoration:underline;
 }
 #listadefotosmobile{
