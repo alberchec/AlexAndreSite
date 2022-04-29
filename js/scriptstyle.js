@@ -39,6 +39,9 @@ function larguraEstilo1(){
 			padding-left:`+0.0016*altT+`px;
 			border-radius:`+0.11*altT+`px;
 		}
+		#botao4div{
+			margin-right:0;
+		}
 		/*A EMPRESA*/
 		/*#aempresa ul li{
 			width:50%;
@@ -115,6 +118,9 @@ function larguraEstilo2(){
 			padding-right:`+0.0016*altT+`px;
 			padding-left:`+0.0016*altT+`px;
 			border-radius:`+0.11*altT+`px;
+		}
+		#botao4div{
+			margin-right:0;
 		}
 		/*A EMPRESA*/
 		#aempresa ul li{
@@ -251,6 +257,9 @@ function larguraEstilo3(){
 			padding-left:`+0.0016*altT+`px;
 			border-radius:`+0.11*altT+`px;
 		}
+		#botao4div{
+			margin-right:0;
+		}
 
 		/* A EMPRESA */
 		#aempresa ul li{
@@ -376,19 +385,24 @@ function larguraEstiloMobile(){
 			padding-left:`+0.005*altT+`px;
 			border-radius:`+0.3*altT+`px;
 		}
+		#botao4div{
+			margin-right:0;
+		}
 		#slideshow{
 			height:90vh;
 		}
 		#slidebotao{
+			width:292px;
 			top:80vh;
-			left:23vw;
+			left:50%;
+			transform:translate(-50%);
 		}
 		#slideshow h6{
 			font-size:7vw;
 		}
 		#slidetexto1{
-			width:88vw;
-			left:52vw;
+			width:94vw;
+			left:50vw;
 			top:50vh;
 		}
 		.textoslide1{
@@ -397,9 +411,9 @@ function larguraEstiloMobile(){
 			transform:translate(-50%);
 		}
 		#slidetexto2{
-			width:70vw;
+			width:75vw;
 			top:55vh;
-			left:52vw;
+			left:50vw;
 		}
 		.textoslide2{
 			float:left;
@@ -409,12 +423,12 @@ function larguraEstiloMobile(){
 		#slidetexto3{
 			width:70vw;
 			top:50vh;
-			left:52vw;
+			left:50vw;
 		}
 		#slidetexto4{
 			width:80vw;
 			top:50vh;
-			left:52vw;
+			left:50vw;
 		}
 		#setaesquerdalink, #setadireitalink{
 			display:none;
