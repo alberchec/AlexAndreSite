@@ -392,10 +392,8 @@ function larguraEstiloMobile(){
 			height:90vh;
 		}
 		#slidebotao{
-			width:292px;
+			width:`+0.27*altT+`px;
 			top:80vh;
-			left:50%;
-			transform:translate(-50%);
 		}
 		#slideshow h6{
 			font-size:7vw;
