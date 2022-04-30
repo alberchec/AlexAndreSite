@@ -91,6 +91,7 @@ function slideshowMobileObras(i){
 	document.getElementById("listaMobileFotosObra"+i).onclick=function(){
 		document.getElementById("slideshowMobileFotoDiv").style.display="block";
 		document.getElementById("slideshowMobilePropriamente").style.display="block";
+		document.getElementById("slideshowMobilePropriamente").scrollTop=0;
 		document.getElementById("fechargaleriamobile").style.display="block";
 		determinarFotosSlideShowMobile(i);
 		document.getElementById("galeriadefotosmobile").style.overflow="hidden";
