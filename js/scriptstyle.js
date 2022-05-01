@@ -1,7 +1,8 @@
 /* SCRIPT QUE DA ESTILO AO WEBSITE A PARTIR DO TAMANHO DO MONITOR DO USUARIO */
 var altT=screen.height;
 var largT=screen.width;
-var razaopixels=window.devicePixelRatio;
+var razaopixels=2;
+/*var razaopixels=window.devicePixelRatio;*/
 
 var sheet=document.createElement("style");
 document.body.appendChild(sheet);
@@ -715,47 +716,4 @@ function aocarregarSS(){
 	}else if(window.innerWidth<=360*razaopixels){
 		larguraEstiloMobile();
 	};
-	/*if(window.devicePixelRatio==1){
-		if(window.innerWidth>=1024){
-			larguraEstilo1();
-		}else if(window.innerWidth>800 && window.innerWidth<1024){
-			larguraEstilo2();
-		}else if(window.innerWidth>600 && window.innerWidth<=800){
-			larguraEstilo3();
-		}else if(window.innerWidth<=600){
-			larguraEstiloMobile();
-		}
-	}else if(window.devicePixelRatio==2){
-		if(window.innerWidth>=1296){
-			larguraEstilo1();
-		}else if(window.innerWidth>1024 && window.innerWidth<1296){
-			larguraEstilo2();
-		}else if(window.innerWidth>720 && window.innerWidth<=1024){
-			larguraEstilo3();
-		}else if(window.innerWidth<=720){
-			larguraEstiloMobile();
-		}
-	}else if(window.devicePixelRatio==3){
-		if(window.innerWidth>=3000){
-			larguraEstilo1();
-		}else if(window.innerWidth>2000 && window.innerWidth<3000){
-			larguraEstilo2();
-		}else if(window.innerWidth>1500 && window.innerWidth<=2000){
-			larguraEstilo3();
-		}else if(window.innerWidth<=1500){
-			larguraEstiloMobile();
-		}
-	}*/
-	/*if(window.innerWidth>=largT*0.9){
-		larguraEstilo1();
-	};
-	if(window.innerWidth>=largT*0.7 && window.innerWidth<largT*0.9){
-		larguraEstilo2();
-	};
-	if(window.innerWidth>=largT*0.5 && window.innerWidth<largT*0.7){
-		larguraEstilo3();
-	};
-	if(window.innerWidth<largT*0.5){
-		larguraEstiloMobile();
-	};*/
 };
