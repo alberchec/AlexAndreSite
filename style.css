@@ -378,6 +378,10 @@ div ul li img{
 	background-color:#ffffff;
 	box-shadow:2px .5px 5px #ababab;
 }
+#servicos ul li div{
+	margin: 0;
+	padding: 0;
+}
 /*
 #servicos ul li:hover{
 	box-shadow:2px 1px 20px #545454;
@@ -391,7 +395,7 @@ div ul li img{
 	width:100%;
 }
 h3 {
-	font:italic bold 1.3vw open sans;
+	font:italic bold 20px open sans;
 	text-align:center;
 	color:#706962;
 	margin:0;
@@ -401,7 +405,7 @@ h3 {
 }
 #servicos ul li p {
 	font-family: open sans;
-	font-size:1vw;
+	font-size:18px;
 }
 
 /* OBRAS REALIZADAS */
@@ -668,7 +672,7 @@ table tr td img{
 	cursor:pointer;
 }
 table tr td h10{
-	font-size:44px;
+	font-size:8vw;
 	font-family: open sans;
 	font-weight: lighter;
 	color:#555;

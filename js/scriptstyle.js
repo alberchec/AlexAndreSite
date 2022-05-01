@@ -77,11 +77,15 @@ function larguraEstilo1(){
 		}
 		#servicos ul li{
 			width:23.79vw;
-			height:25.5vw;
+		}
+		#servicos ul li div{
+			width:23.79vw;
+			height:160px;
 		}
 		#servicos h2{
 			margin-left:0.66vw;
 		} 
+		/*OBRAS REALIZADAS*/
 		#obras ul{
 			width:98vw;
 		}
@@ -163,17 +167,21 @@ function larguraEstilo2(){
 		}
 		#servicos ul li{
 			width:28vw;
-			height:30.4vw;
+		}
+		#servicos ul li div{
+			width:28vw;
+			height:150px;
 		}
 		#servicos h2{
 			margin-left:7vw;
 		} 
 		#servicos ul li h3{
-			font-size:1.5vw;
+			font-size:18px;
 		}
 		#servicos ul li p{
-			font-size:1.2vw;
+			font-size:16px;
 		}
+		/*OBRAS REALIZADAS*/
 		#obras ul{
 			width:98vw;
 		}
@@ -308,16 +316,19 @@ function larguraEstilo3(){
 		}
 		#servicos ul li{
 			width:43.65vw;
-			height:47.39vw;
+		}
+		#servicos ul li div{
+			width:43.65vw;
+			height:140px;
 		}
 		#servicos h2{
 			margin-left:7vw;
 		} 
 		#servicos ul li h3{
-			font-size:2.5vw;
+			font-size:18px;
 		}
 		#servicos ul li p{
-			font-size:2vw;
+			font-size:16px;
 		}
 		/* OBRAS REALIZADAS */
 		#obras ul{
@@ -541,17 +552,20 @@ function larguraEstiloMobile(){
 		#servicos ul li {
 			float:left;
 			width:90vw;
-			height:98vw;
 			margin:0;
 			margin-top:1vh;
 			margin-bottom:2vh;
 			padding:2vw;
 		}
+		#servicos ul li div{
+			width:90vw;
+			height:200px;
+		}
 		h3 {
-			font-size:5vw;
+			font-size:30px;
 		}
 		#servicos ul li p {
-			font-size:4vw;
+			font-size:24px;
 		}
 
 		/* OBRAS REALIZADAS */
