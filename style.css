@@ -173,44 +173,40 @@ header nav ul li a {
 	padding:0;
 	margin:0;
 	margin-top:1vh;
+}
+#slideshow h6 span{
 	background-color:#41800e;
 }
 #slidetexto1{
-	width:35vw;
 	right:2vw;
 	top:25vh;
 }
 .textoslide1{
-	float:right;
 	text-align:right;
 }
 #slidetexto2{
-	width:30vw;
 	top:25vh;
 	right:4vw;
 }
 .textoslide2{
-	float:right;
 	text-align: right;
 }
 #slidetexto3{
-	width:30vw;
 	top:50vh;
-	left:50vw;
+	left: 50%;
 }
 .textoslide3{
-	float:left;
+	text-align: center;
 	left:50%;
 	transform:translate(-50%);
 }
 #slidetexto4{
-	width:30vw;
 	top:50vh;
-	left:50vw;
+	left:50%;
 	cursor: pointer;
 }
 .textoslide4{
-	float:left;
+	text-align: center;
 	left:50%;
 	transform:translate(-50%);
 }
