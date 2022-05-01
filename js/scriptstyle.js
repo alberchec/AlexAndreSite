@@ -675,10 +675,8 @@ function larguraEstiloMobile(){
 			padding-left:3vw;
 			padding-right:3vw;
 		}
-		#contatolista ul {
-			margin:0;
-			margin-top:4vh;
-			padding:0;
+		#contato ul {/*It was #contatolista ul*/
+			width:94vw;
 		}
 		#contato ul li {
 			float:none;
@@ -687,6 +685,7 @@ function larguraEstiloMobile(){
 		#contato #contatoinfo {
 			margin-left:0vw;
 			margin-top:4vh;
+			width:94vw;
 		}
 		#contato ul li iframe{
 			width:94vw;

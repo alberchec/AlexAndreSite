@@ -472,7 +472,8 @@ h3 {
 	margin:0;
 	font-size:2vw;
 	font-family:"open sans";
-	font-style:normal;  
+	font-style:normal;
+	font-weight: lighter;
 	color:white;
 	background-color:rgba(0,0,0,0.7); 
 	-o-transition:.3s;
@@ -806,16 +807,17 @@ h11{
 	background-color:#f2f2f2;
 	overflow:hidden;
 }
-#contatolista ul {
+/*#contatolista ul {
 	margin:0;
 	margin-top:4vh;
 	padding:0;
 	z-index:2;
-}
+}*/
 #contato ul{
 	margin:0;
 	margin-top:4vh;
 	padding:0;
+	width: 80vw;
 }
 #contato ul li {
 	float:left;
@@ -826,6 +828,7 @@ h11{
 #contato #contatoinfo {
 	margin-left:12vw;
 	margin-top:0vh;
+	width: 35vw;
 }
 #contato ul li iframe{
 	margin:0;
