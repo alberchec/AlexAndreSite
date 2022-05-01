@@ -365,15 +365,13 @@ div ul li img{
 #servicos ul li {
 	float:left;
 	list-style:none;
-	/*width:23.79vw;
-	height:25vw;*/
 	margin:0;
 	padding:0;
 	margin-top:1vh;
 	margin-bottom:2vh;
-	margin-right:0.66%;/*era vw*/
-	margin-left:0.66%;/*era vw*/
-	padding:1%;/*era vw*/
+	margin-right:0.66vw;
+	margin-left:0.66vw;
+	padding:1vw;
 	background-color:#ffffff;
 	box-shadow:2px .5px 5px #ababab;
 }
@@ -424,7 +422,7 @@ h3 {
 	padding:0;
 }
 #obras ul {
-	margin:.8%;/*era vw*/
+	margin:1vw;
 	margin-top:2vh;
 	margin-bottom:4vh;
 	padding:0;
@@ -434,7 +432,7 @@ h3 {
 	/*width:24.2vw;
 	height:20vw;*/
 	padding:0;
-	margin:.2%;/*era vw*/
+	margin:.2vw;
 	/*box-shadow:2px 2px 5px #0a0a0a;*/
 	overflow:hidden;
 	/*-o-transition:.8s;

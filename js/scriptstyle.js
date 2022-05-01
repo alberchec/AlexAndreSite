@@ -72,6 +72,9 @@ function larguraEstilo1(){
 			padding-left:9.33vw; 
 			padding-right:9.33vw; 
 		} 
+		#servicos ul{
+			width:81.33vw;
+		}
 		#servicos ul li{
 			width:23.79vw;
 			height:25.5vw;
@@ -79,8 +82,11 @@ function larguraEstilo1(){
 		#servicos h2{
 			margin-left:0.66vw;
 		} 
+		#obras ul{
+			width:98vw;
+		}
 		#obras ul li{
-			width:24.2%;/*era vw*/
+			width:24.1vw;
 			height:20vw;
 		}
 		#obras ul li img {
@@ -152,6 +158,9 @@ function larguraEstilo2(){
 			padding-left:3vw; 
 			padding-right:3vw; 
 		}
+		#servicos ul{
+			width:93.96vw;
+		}
 		#servicos ul li{
 			width:28vw;
 			height:30.4vw;
@@ -165,8 +174,11 @@ function larguraEstilo2(){
 		#servicos ul li p{
 			font-size:1.2vw;
 		}
+		#obras ul{
+			width:98vw;
+		}
 		#obras ul li{
-			width:32.4vw;
+			width:32.26vw;
 			height:26.77vw;
 		}
 		#obras ul li img {
@@ -291,6 +303,9 @@ function larguraEstilo3(){
 			padding-left:3vw; 
 			padding-right:3vw; 
 		}
+		#servicos ul{
+			width:93.94vw;
+		}
 		#servicos ul li{
 			width:43.65vw;
 			height:47.39vw;
@@ -305,8 +320,11 @@ function larguraEstilo3(){
 			font-size:2vw;
 		}
 		/* OBRAS REALIZADAS */
+		#obras ul{
+			width:98vw;
+		}
 		#obras ul li{
-			width:32.4vw;
+			width:32.26vw;
 			height:26.77vw;
 		}
 		#obras ul li img {
@@ -517,6 +535,9 @@ function larguraEstiloMobile(){
 			padding-left:3vw;
 			padding-right:3vw;
 		}
+		#servicos ul{
+			width:94vw;
+		}
 		#servicos ul li {
 			float:left;
 			width:90vw;
@@ -541,6 +562,7 @@ function larguraEstiloMobile(){
 			display:none;
 		}
 		#obras ul{
+			width:100vw;
 			padding:1vw;
 			margin:3vw;
 			background-color:white;
@@ -550,7 +572,6 @@ function larguraEstiloMobile(){
 			box-shadow:1px 1px 5px #aaa;
 		}
 		#obras ul li{
-			/*float:left;*/
 			width:45.2vw;
 			height:35vw;
 			padding:0;
