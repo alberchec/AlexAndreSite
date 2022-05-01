@@ -552,20 +552,17 @@ function larguraEstiloMobile(){
 		#servicos ul li {
 			float:left;
 			width:90vw;
+			height:98vw;
 			margin:0;
 			margin-top:1vh;
 			margin-bottom:2vh;
 			padding:2vw;
 		}
-		#servicos ul li div{
-			width:90vw;
-			height:200px;
-		}
 		h3 {
-			font-size:30px;
+			font-size:5vw;
 		}
 		#servicos ul li p {
-			font-size:24px;
+			font-size:4vw;
 		}
 
 		/* OBRAS REALIZADAS */
