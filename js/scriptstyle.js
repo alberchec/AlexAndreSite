@@ -562,7 +562,7 @@ function larguraEstiloMobile(){
 			display:none;
 		}
 		#obras ul{
-			width:100vw;
+			width:92vw;
 			padding:1vw;
 			margin:3vw;
 			background-color:white;
