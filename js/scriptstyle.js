@@ -548,7 +548,7 @@ function larguraEstiloMobile(){
 			padding:2vw;
 		}
 		h3 {
-			font:italic lighter 5vw georgia;
+			font-size:5vw;
 		}
 		#servicos ul li p {
 			font-size:4vw;

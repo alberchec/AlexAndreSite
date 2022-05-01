@@ -1,3 +1,7 @@
+@font-face{
+	font-family: open sans;
+	src: url(OpenSans-Light.ttf);
+}
 body {
 	display:none;
  	background-color:white;
@@ -46,8 +50,8 @@ header nav ul li {
 header nav ul li a {
 	display:block;
 	color:#555353;
-	font-family:"avenir";
-	font-weight:normal;
+	font-family:"open sans";
+	font-weight:bold;
 	font-size:1.25vw;
 	text-decoration:none;
 	/*padding:0 1vw;*/
@@ -166,7 +170,7 @@ header nav ul li a {
 }
 #slideshow h6{
 	font-size:2.6vw;
-	font-family:"helvetica neue";
+	font-family:"open sans";
 	font-style:italic;
 	font-weight:lighter;
 	color:white;
@@ -228,7 +232,7 @@ header nav ul li a {
 	margin-left:10vw;
 }
 h2 {
-	font:44px Avenir;
+	font:44px open sans;
 	text-decoration:underline;
 	color:#706962;
 	margin-top:3vh;
@@ -236,8 +240,7 @@ h2 {
 	padding:0;
 }
 p {
-	font-family:"helvetica neue";
-	font-weight: 300;
+	font-family:"open sans";
 	font-size:1.3vw;
 	text-align:justify;
 	margin:0;
@@ -388,7 +391,7 @@ div ul li img{
 	width:100%;
 }
 h3 {
-	font:italic lighter 1.3vw georgia;
+	font:italic bold 1.3vw open sans;
 	text-align:center;
 	color:#706962;
 	margin:0;
@@ -397,6 +400,7 @@ h3 {
 	margin-bottom:1vh;
 }
 #servicos ul li p {
+	font-family: open sans;
 	font-size:1vw;
 }
 
@@ -467,7 +471,7 @@ h3 {
 	padding:0;
 	margin:0;
 	font-size:2vw;
-	font-family:"helvetica neue";
+	font-family:"open sans";
 	font-style:normal;  
 	color:white;
 	background-color:rgba(0,0,0,0.7); 
@@ -559,7 +563,6 @@ h3 {
 	max-height:95vh;
 }
 .fontetextogaleria {
-	font-family:"helvetica";
 	font-style:normal; 
 }
 #galeriasetaesquerda {
@@ -664,10 +667,11 @@ table tr td img{
 	cursor:pointer;
 }
 table tr td h10{
-	font-size:5vh;
-	font-family: Avenir;
+	font-size:44px;
+	font-family: open sans;
+	font-weight: lighter;
 	color:#555;
-	text-align:center;
+	padding: 2vw;
 }
 #galeriadefotosmobile{
 	display:none;
@@ -685,7 +689,8 @@ table tr td h10{
 }
 h11{
 	font-size:4vh;
-	font-family: Avenir;
+	font-family: open sans;
+	font-weight: bold;
 	text-decoration:underline;
 }
 #listadefotosmobile{
@@ -719,6 +724,8 @@ h11{
 	margin-bottom:0.5vh;
 }
 #galeriadefotosmobile p{
+	font-family: open sans;
+	font-weight: lighter;
 	font-size:3vh;
 }
 #listadefotosmobile img{
@@ -737,7 +744,7 @@ h11{
 	left:50%;
 	transform:translate(-50%, -50%);
 	font-size:8vw;
-	font-family:"avenir";
+	font-family:"open sans";
 	opacity:1;
 	background-color:rgba(255,255,255,0.5);
 	border-radius:5px;
@@ -829,8 +836,9 @@ h11{
 }
 #contato ul li h3 {
 	font-size:1.5vw;
-	font-family:helvetica;
-	font-style:normal;
+	font-family:open sans;
+	font-weight: bold;
+	font-style: normal;
 	text-align:left;
 	color:black;
 }
