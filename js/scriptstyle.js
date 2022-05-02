@@ -170,17 +170,11 @@ function larguraEstilo2(){
 		}
 		#servicos ul li div{
 			width:28vw;
-			height:150px;
+			height:200px;
 		}
 		#servicos h2{
 			margin-left:7vw;
 		} 
-		#servicos ul li h3{
-			font-size:18px;
-		}
-		#servicos ul li p{
-			font-size:16px;
-		}
 		/*OBRAS REALIZADAS*/
 		#obras ul{
 			width:98vw;
@@ -319,17 +313,11 @@ function larguraEstilo3(){
 		}
 		#servicos ul li div{
 			width:43.65vw;
-			height:140px;
+			height:200px;
 		}
 		#servicos h2{
 			margin-left:7vw;
 		} 
-		#servicos ul li h3{
-			font-size:18px;
-		}
-		#servicos ul li p{
-			font-size:16px;
-		}
 		/* OBRAS REALIZADAS */
 		#obras ul{
 			width:98vw;
