@@ -28,6 +28,7 @@ document.getElementById("obraslista").onclick=function(){
 	if(window.innerWidth<=360*razaopixels){
 		document.getElementById("menugaleriamobile").style.display="block";
 		document.getElementById("galeriadefotosmobile").style.display="block";
+		document.getElementById("galeriadefotosmobile").scrollTop=0;
 		document.getElementById("corpo").style.position="fixed";
 		document.getElementById("corpo").style.overflow="hidden";
 		/*document.ontouchmove = function(e){ e.preventDefault(); }
