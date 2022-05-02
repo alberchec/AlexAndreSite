@@ -696,10 +696,10 @@ function larguraEstiloMobile(){
 			height:71vw;
 		}
 		#contato ul li h3 {
-			font-size:4vw;
+			font-size:5vw;
 		}
 		#contato ul li p {
-			font-size:4vw;
+			font-size:5vw;
 		}
 
 		/* RODAPE */

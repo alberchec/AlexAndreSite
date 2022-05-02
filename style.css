@@ -843,7 +843,7 @@ h11{
 	box-shadow:2px 2px 5px #000000;
 }
 #contato ul li h3 {
-	font-size:1.5vw;
+	font-size:22px;
 	font-family:open sans;
 	font-weight: bold;
 	font-style: normal;
@@ -851,7 +851,7 @@ h11{
 	color:black;
 }
 #contato ul li p {
-	font-size:1.2vw;
+	font-size:19px;
 	color:black;
 }
 
