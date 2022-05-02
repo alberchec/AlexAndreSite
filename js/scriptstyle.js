@@ -48,7 +48,6 @@ function larguraEstilo1(){
 			width:50%;
 		}*/
 		/*#aempresa ul li p{
-			font-size:2vh;
 			margin-left:0;
 			padding-right:3vw;
 		}*/
@@ -143,7 +142,6 @@ function larguraEstilo2(){
 			width:50%;
 		}
 		#aempresa ul li p{
-			font-size:3vh;
 			margin-left:0;
 			padding-right:3vw;
 		}
@@ -286,7 +284,6 @@ function larguraEstilo3(){
 			width:50%;
 		}
 		#aempresa ul li p{
-			font-size:3vh;
 			margin-left:0;
 			padding-right:3vw;
 		}
