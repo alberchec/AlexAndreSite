@@ -72,7 +72,7 @@ function larguraEstilo1(){
 			padding-right:0; 
 		} 
 		#servicos ul{
-			width:1217.7px;
+			width:1218px;
 			margin-left:auto;
 			margin-right:auto;
 		}
