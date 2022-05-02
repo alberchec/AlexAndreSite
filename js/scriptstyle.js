@@ -545,7 +545,7 @@ function larguraEstiloMobile(){
 		#servicos ul li {
 			float:left;
 			width:90vw;
-			height:98vw;
+			min-height:98vw;
 			margin:0;
 			margin-top:1vh;
 			margin-bottom:2vh;
