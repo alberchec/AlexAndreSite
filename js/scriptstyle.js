@@ -69,21 +69,26 @@ function larguraEstilo1(){
 
 		/*SERVICOS*/
 		#servicos{ 
-			padding-left:9.33vw; 
-			padding-right:9.33vw; 
+			padding-left:0; 
+			padding-right:0; 
 		} 
 		#servicos ul{
-			width:81.33vw;
+			width:1217.7px;
+			margin-left:auto;
+			margin-right:auto;
 		}
 		#servicos ul li{
-			width:23.79vw;
+			width:362.88px;
+			margin-right:8.55px;
+			margin-left:8.55px;
+			padding:12.96px;
 		}
 		#servicos ul li div{
-			width:23.79vw;
+			width:362.88px;
 			height:160px;
 		}
 		#servicos h2{
-			margin-left:0.66vw;
+			margin-left:10vw;
 		} 
 		/*OBRAS REALIZADAS*/
 		#obras ul{

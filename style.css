@@ -364,6 +364,7 @@ div ul li img{
 #servicos ul{
 	margin:0;
 	padding:0;
+	margin-top: 2vh;
 }
 #servicos ul li {
 	float:left;
