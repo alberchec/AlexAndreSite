@@ -694,7 +694,7 @@ table tr td h10{
 	-webkit-overflow-scrolling:touch;
 }
 h11{
-	font-size:4vh;
+	font-size:5vw;
 	font-family: open sans;
 	font-weight: bold;
 	text-decoration:underline;
@@ -732,7 +732,7 @@ h11{
 #galeriadefotosmobile p{
 	font-family: open sans;
 	font-weight: lighter;
-	font-size:3vh;
+	font-size:4vw;
 }
 #listadefotosmobile img{
 	display:block;
