@@ -2,19 +2,27 @@ on:
   push:
     branches:
       - google-server
+name: 🚀 Deploy to server
 jobs:
   deploy_job:
     runs-on: ubuntu-latest
-    name: deploy
+    name: 🎉 Deploy
     steps:
-      - name: Checkout
+      - name: 🚚 Get latest code
         uses: actions/checkout@v2
-      - name: deploy file
-        uses: wlixcc/SFTP-Deploy-Action@v1.0
+      
+      - name: Copy exluding subdirectory
+        uses: dj-256/github-deploy@v1
         with:
-          username: ${{ secrets.SSH_USER }} 
-          server: ${{ secrets.SSH_SERVER }} 
-          ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }} 
-          local_path: './*'
-          remote_path: '.'
-          args: '-o ConnectTimeout=5'
+            local: "./"
+            remote: "/var/www/html"
+            host: ${{ secrets.SSH_SERVER }}
+            username: ${{ secrets.SSH_USER }}
+            passphrase: ${{ secrets.SSH_PRIVATE_KEY }}
+            exclude: 
+              '.git'
+              'CNAME'
+              '.github'
+              'Images'
+              '*.ttf'
+              'js'
