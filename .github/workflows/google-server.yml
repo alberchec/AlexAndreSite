@@ -14,8 +14,8 @@ jobs:
       - name: deploy via scp
         uses: horochx/deploy-via-scp@master
         with:
-          local: ./server
-          remote: teste/
+          local: ./*
+          remote: /var/www/html
           host: ${{ secrets.SSH_SERVER }}
           port: ${{ secrets.SSH_PORT }}
           user: ${{ secrets.SSH_USER }}
