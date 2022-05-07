@@ -1,23 +1,16 @@
 from PIL import Image, ImageFilter, ImageOps
-import sys
 
-arguments = sys.argv
-del arguments[0]
+def resize(file,size="-l"):
 
-#SET RESULT IMAGE SIZE, first larger value
-size = arguments[0]
+	#SET RESULT IMAGE SIZE, first larger value
+	if(size == "-m"): size = 800,600
+	elif(size == "-s"): size = 200,150
+	else: size = 1500,1125
 
-if(size == "-l" or size == "-m" or size == "-s"):
-	del arguments[0]
-
-if(size == "-m"): size = 800,600
-elif(size == "-s"): size = 200,150
-else: size = 1500,1125
-
-#MODIFY IMAGES
-for file in arguments:
-	image=Image.open(file)
-	image=ImageOps.exif_transpose(image)
+	#MODIFY IMAGES
+	im=Image.open(file)
+	image=ImageOps.exif_transpose(im)
+	im.close()
 	pixels = image.size
 
 	if(pixels[0] < pixels[1]):
@@ -37,6 +30,6 @@ for file in arguments:
 		image = image.resize(size)
 
 	image = image.filter(ImageFilter.GaussianBlur(radius=0.5) )
-	image.save("mod_" + file,optimize=True,quality=80)
+	image.save(file,optimize=True,quality=80)
 
 	image.close()
