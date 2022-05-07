@@ -4,29 +4,26 @@ on:
       - google-server
 name: 🚀 Deploy to server
 jobs:
-  deploy_job:
+  build:
     runs-on: ubuntu-latest
-    name: 🎉 Deploy
+    name: Build and Deploy
+
     steps:
-      - name: 🚚 Get latest code
-        uses: actions/checkout@v2
-      
-      - name: Copy exluding subdirectory
-        uses: dj-256/github-deploy@v1
+      - uses: actions/checkout@master
+
+      - name: Bucket actions
+        uses: actions/setup-node@v1
         with:
-            local: "./"
-            remote: "/var/www/html"
-            host: ${{ secrets.SSH_SERVER }}
-            username: ${{ secrets.SSH_USER }}
-            passphrase: ${{ secrets.SSH_PRIVATE_KEY }}
-            exclude: |
-              **/.git*
-              **/.git*/**
-              **/CNAME
-              **/.github*
-              **/.github*/**
-              **/Images*
-              **/Images*/**
-              **/*.ttf
-              **/js*
-              **/js*/**
+          node-version: 8
+      - run: npm i
+      - run: npm run test
+      - run: npm run generate
+      
+      - name: Publish
+        uses: nogsantos/scp-deploy@master
+        with:
+          src: "./"
+          host: ${{ secrets.SSH_SERVER }}
+          remote: "/var/www/html"
+          user: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
