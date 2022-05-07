@@ -11,12 +11,13 @@ jobs:
       - name: 🚚 Get latest code
         uses: actions/checkout@v2
       
-      - name: deploy via scp
-        uses: horochx/deploy-via-scp@master
+      - name: Deploy via scp
+        uses: ilCollez/ssh-scp-deploy@main
         with:
-          local: ./*
-          remote: /var/www/html
-          host: ${{ secrets.SSH_SERVER }}
-          port: ${{ secrets.SSH_PORT }}
-          user: ${{ secrets.SSH_USER }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
+            host: ${{ secrets.SSH_SERVER }}
+            port: ${{ secrets.SSH_PORT }}
+            username: ${{ secrets.SSH_USER }}
+            key: ${{ secrets.SSH_PRIVATE_KEY }}
+            files: |
+                server
+            remote-path: "/var/www/html"
