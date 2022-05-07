@@ -19,10 +19,14 @@ jobs:
             host: ${{ secrets.SSH_SERVER }}
             username: ${{ secrets.SSH_USER }}
             passphrase: ${{ secrets.SSH_PRIVATE_KEY }}
-            exclude: 
-              '.git'
-              'CNAME'
-              '.github'
-              'Images'
-              '*.ttf'
-              'js'
+            exclude: |
+              **/.git*
+              **/.git*/**
+              **/CNAME
+              **/.github*
+              **/.github*/**
+              **/Images*
+              **/Images*/**
+              **/*.ttf
+              **/js*
+              **/js*/**
