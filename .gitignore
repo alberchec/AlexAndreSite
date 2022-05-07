@@ -31,6 +31,8 @@
 *.out
 *.app
 
+#Python cache
+*.pyc
+
 #Folder attributes
 .DS_Store
-
