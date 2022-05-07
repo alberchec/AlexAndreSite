@@ -25,5 +25,6 @@ jobs:
           src: "./"
           host: ${{ secrets.SSH_SERVER }}
           remote: "/var/www/html"
+          port: ${{ secrets.SSH_PORT }}
           user: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
