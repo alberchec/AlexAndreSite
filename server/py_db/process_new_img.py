@@ -13,7 +13,6 @@ results = read_query(connection,query)
 id_value = int(id_value)
 
 for result in results:
-    file = open("last_img_added.txt","w")
     path = "/var/www/html/piwigo_app/" + result[1][2:]
     filename = result[1][20:]
     path2 = "/home/alberchec/temp/" + filename
@@ -26,6 +25,7 @@ for result in results:
     cp(path2,paths)
     resize(paths,"-s")
     mv(path2,path)
+    file = open("last_img_added.txt","w")
     file.write(str(result[0]) )
     file.close()
 
