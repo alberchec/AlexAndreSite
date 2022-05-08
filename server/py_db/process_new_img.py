@@ -28,3 +28,5 @@ for result in results:
     mv(path2,path)
     file.write(str(result[0]) )
     file.close()
+
+connection.close()
