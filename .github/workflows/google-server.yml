@@ -11,7 +11,7 @@ jobs:
       - name: 🚚 Get latest code
         uses: actions/checkout@v2
       
-      - name: Deploy via scp
+      - name: Deploy server files
         uses: ilCollez/ssh-scp-deploy@main
         with:
             host: ${{ secrets.SSH_SERVER }}
@@ -20,4 +20,4 @@ jobs:
             key: ${{ secrets.SSH_PRIVATE_KEY }}
             files: |
                 server
-            remote-path: "/var/www/html"
+            remote-path: "/home/alberchec/"
