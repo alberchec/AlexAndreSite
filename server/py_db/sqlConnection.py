@@ -2,7 +2,7 @@ import mysql.connector
 from mysql.connector import Error
 import pandas as pd
 
-file = open("/home/alberchec/db_snh.txt","r")
+file = open("/home/alberchec/.db_snh.txt","r")
 fcontent = file.read().splitlines()
 file.close()
 
@@ -10,6 +10,7 @@ host_name = fcontent[0]
 user_name = fcontent[1]
 db_name = fcontent[2]
 user_password = fcontent[3]
+fcontent = ""
 
 def create_db_connection(host_name, user_name, user_password, db_name):
     connection = None
