@@ -1,6 +1,6 @@
 import mysql.connector
 from mysql.connector import Error
-import pandas as pd
+#import pandas as pd
 
 file = open("/home/alberchec/.db_snh.txt","r")
 fcontent = file.read().splitlines()
