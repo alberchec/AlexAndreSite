@@ -24,7 +24,7 @@ for result in results:
     cp(path2,paths)
     resize(paths,"-s")
     mv(path2,path)
-    query = "UPDATE piwigo_images SET compressed=1 WHERE id=" + result[0]
+    query = "UPDATE piwigo_images SET compressed=1 WHERE id=" + str(result[0])
     execute_query(connection,query)    
 
 connection.close()
