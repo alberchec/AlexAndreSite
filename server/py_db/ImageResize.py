@@ -1,4 +1,4 @@
-from PIL import Image, ImageFilter
+from PIL import Image, ImageFilter, ImageOps
 
 def resize(file,size="-l"):
 
@@ -8,7 +8,9 @@ def resize(file,size="-l"):
 	else: size = 1500,1125
 
 	#MODIFY IMAGES
-	image = Image.open(file)
+	im=Image.open(file)
+	image=ImageOps.exif_transpose(im)
+	im.close()
 	pixels = image.size
 
 	if(pixels[0] < pixels[1]):
