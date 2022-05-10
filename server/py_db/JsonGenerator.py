@@ -10,32 +10,25 @@ if(lastmod == date):
 	connection.close()
 	quit()
 
+import json
+
 img_info = {
 		"name":"",
 		"comment":"",
 		"file":"",
 }
 
-img_data = {
-	"Base de Piso" : [],
-	"Pavimentação" : [],
-	"Corte e Aterro" : [],
-	"Pavimento Externo" : [],
-	"Loteamentos" : [],
-	"Drenagem" : [],
-	"Demolição" : [],
-	"Infraestrutura" : []
-}
+img_data = ""
 
 albums = [
-	["Base de Piso",1],
-	["Pavimentação",3],
-	["Corte e Aterro",4],
-	["Pavimento Externo",5],
-	["Loteamentos",6],
-	["Drenagem",7],
-	["Demolição",10],
-	["Infraestrutura",9]
+	["BasePiso",1],
+	["Pav",3],
+	["CorteAterro",4],
+	["PavExt",5],
+	["Lot",6],
+	["Dren",7],
+	["Dem",10],
+	["Infra",9]
 ]
 
 for album in albums:
@@ -54,11 +47,10 @@ for album in albums:
 		dic["file"] = result[2][20:]
 
 		list.append(dic)
+	json_string = json.dumps(list)
+	img_data = img_data + album[0] + "='" + json_string + "';"
 
-	img_data[album[0]] = list
 
-
-import json
 from glob import glob
 from os import remove
 
@@ -70,7 +62,8 @@ lastmod = open("lastmodified.txt","w")
 lastmod.write(date)
 lastmod.close()
 
-with open("/var/www/html/images.json?" + date,"w") as outfile:
-	json.dump(img_data,outfile)
+fileout = open("/var/www/html/images.json?" + date,"w")
+fileout.write(img_data)
+fileout.close()
 
 connection.close()
