@@ -41,8 +41,8 @@ albums = [
 for album in albums:
 	query = "SELECT A.name,A.comment,A.path FROM piwigo_images \
 	AS A INNER JOIN piwigo_image_category AS B ON \
-	A.id=B.image_id WHERE B.category_id=" + str(album[1]) + " ORDER BY \
-	A.date_available DESC LIMIT 50"
+	A.id=B.image_id WHERE B.category_id=" + str(album[1]) + " \
+	AND A.compressed=1 ORDER BY A.date_available DESC LIMIT 50"
 
 	results = read_query(connection,query)
 
