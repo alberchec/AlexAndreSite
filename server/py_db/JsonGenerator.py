@@ -1,7 +1,7 @@
 import sqlConnection
 from sqlConnection import connection,read_query
 
-lastmod = open("lastmodified.txt","r").read().splitlines()[0]
+lastmod = open("/home/alberchec/server/py_db/lastmodified.txt","r").read().splitlines()[0]
 
 query = "SELECT lastmodified FROM piwigo_images ORDER BY lastmodified DESC LIMIT 1"
 date = read_query(connection,query)[0][0].strftime("%Y%m%d%H%M%S")
@@ -58,7 +58,7 @@ files = glob("/var/www/html/images.json?*")
 for file in files:
 	remove(file)
 
-lastmod = open("lastmodified.txt","w")
+lastmod = open("/home/alberchec/server/py_db/lastmodified.txt","w")
 lastmod.write(date)
 lastmod.close()
 
