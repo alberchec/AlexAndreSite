@@ -1,5 +1,6 @@
 var numFoto = 1;
 var album = 1;
+var img = document.getElementById("fotogaleria");
 
 /* SETAR OPCOES CAIXA DE OBRAS */
 
@@ -25,7 +26,7 @@ function handleElement(j){
 			album = j;
 			document.getElementById("galeriadefotos").style.display="block";
 			document.getElementById("galeriadefotosinner").style.display="block";
-			document.getElementById("fotogaleria").src="Images/Gallery/obra"+j+"foto1.jpg";
+			img.src="Images/Gallery/obra"+j+"foto1.jpg";
 			document.getElementById("textogaleria").innerHTML=txtobras[j];
 			numFoto = 1;
 			titgal(j);
@@ -50,7 +51,7 @@ document.getElementById("fechargaleria").onclick=function(){
 };
 
 function mudarobra123(){
-	document.getElementById("fotogaleria").src="Images/Gallery/obra"+album+"foto1.jpg";
+	img.src="Images/Gallery/obra"+album+"foto1.jpg";
 	document.getElementById("textogaleria").innerHTML=txtobras[album];
 	titgal(album);
 };
@@ -89,7 +90,7 @@ function setas(escolhadaSeta){
 			numFoto = qtdFotosporObra[album];
 		};
 	};
-	document.getElementById("fotogaleria").src="Images/Gallery/obra"+album+"foto"+numFoto+".jpg";
+	img.src="Images/Gallery/obra"+album+"foto"+numFoto+".jpg";
 };
 
 /* MUDAR FOTOS PELAS SETAS */
