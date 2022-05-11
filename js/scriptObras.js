@@ -4,20 +4,23 @@ var album = 1;
 /* SETAR OPCOES CAIXA DE OBRAS */
 
 function handleElement(j){
+	var list = document.getElementById("obras"+j);
 	/* APARECER TEXTO SOBRE FOTO */
-	document.getElementById("obras"+j).onmouseover=function(){
+	list.onmouseover=function(){
 		if(window.innerWidth>=0.5*screen.width){
-			document.getElementById("obras"+j+"texto").style.opacity="1";
+			document.getElementById("obras"+j+"texto").style.opacity = "1";
+			list.getElementsByTagName("img")[0].style.opacity = "0.7";
 		};
 	};
-	document.getElementById("obras"+j).onmouseout=function(){
+	list.onmouseout=function(){
 		if(window.innerWidth>=0.5*screen.width){
 			document.getElementById("obras"+j+"texto").style.opacity="0";
+			list.getElementsByTagName("img")[0].style.opacity = "1";
 		};
 	};
 
 	/* APARECER GALERIA DE FOTOS AO CLICAR EM UMA FOTO*/
-	document.getElementById("obras"+j).onclick=function(){
+	list.onclick=function(){
 		if(window.innerWidth>360*razaopixels){
 			album = j;
 			document.getElementById("galeriadefotos").style.display="block";
@@ -54,8 +57,7 @@ function mudarobra123(){
 
 
 /* MUDAR FOTOS PELAS SETAS*/
-var escolhadaSeta;
-function setas(){
+function setas(escolhadaSeta){
 	if(escolhadaSeta == 0){
 		/* MUDA PARA A FOTO MAIOR ATE A ULTIMA DA OBRA */
 		if(numFoto < qtdFotosporObra[album]){
@@ -91,14 +93,8 @@ function setas(){
 };
 
 /* MUDAR FOTOS PELAS SETAS */
-document.getElementById("galeriasetadireita").onclick=function(){
-	escolhadaSeta=0;
-	setas();
-};
-document.getElementById("galeriasetaesquerda").onclick=function(){
-	escolhadaSeta=1;
-	setas();
-};
+document.getElementById("galeriasetadireita").onclick=function(){setas(0)};
+document.getElementById("galeriasetaesquerda").onclick=function(){setas(1)};
 
 
 /* SETAR TITULO DA GALERIA DE IMAGENS */
