@@ -104,15 +104,6 @@ function larguraEstilo1(){
 		#obrasvermobile{
 			display:none;
 		}
-		#galeriadefotos h3{
-			font-size:`+0.0192*altT+`px;
-		}
-		#galeriadefotosinnerinner h3, #galeriadefotosinnerinner2 h3{
-			font-size:`+0.0192*altT+`px;
-		}
-		#galeriadefotosinnerinner p{
-			font-size:`+0.016*altT+`px;
-		}
 	`+sheet2;
 	for(i=1;i<=8;i++){
 		document.getElementById("obras"+i+"texto").style.opacity="0";
@@ -195,15 +186,6 @@ function larguraEstilo2(){
 		}
 		#obrasvermobile{
 			display:none;
-		}
-		#galeriadefotos h3{
-			font-size:`+0.0192*altT+`px;
-		}
-		#galeriadefotosinnerinner h3, #galeriadefotosinnerinner2 h3{
-			font-size:`+0.0192*altT+`px;
-		}
-		#galeriadefotosinnerinner p{
-			font-size:`+0.016*altT+`px;
 		}
 	`+sheet2;
 	for(i=1;i<=8;i++){
@@ -337,15 +319,6 @@ function larguraEstilo3(){
 		}
 		#obrasvermobile{
 			display:none;
-		}
-		#galeriadefotos h3{
-			font-size:`+0.0192*altT+`px;
-		}
-		#galeriadefotosinnerinner h3, #galeriadefotosinnerinner2 h3{
-			font-size:`+0.0192*altT+`px;
-		}
-		#galeriadefotosinnerinner p{
-			font-size:`+0.016*altT+`px;
 		}
 	`+sheet2;
 	for(i=1;i<=8;i++){
