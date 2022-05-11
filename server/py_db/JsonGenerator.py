@@ -3,7 +3,7 @@ from sqlConnection import connection,read_query
 
 lastmod = open("/home/alberchec/server/py_db/lastmodified.txt","r").read().splitlines()[0]
 
-query = "SELECT lastmodified FROM piwigo_images ORDER BY lastmodified DESC LIMIT 1"
+query = "SELECT lastmodified FROM piwigo_images WHERE compressed=1 ORDER BY lastmodified DESC LIMIT 1"
 date = read_query(connection,query)[0][0].strftime("%Y%m%d%H%M%S")
 
 if(lastmod == date):
