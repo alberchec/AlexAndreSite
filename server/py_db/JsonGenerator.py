@@ -47,7 +47,7 @@ for album in albums:
 		dic["file"] = result[2][20:]
 
 		list.append(dic)
-	json_string = json.dumps(list)
+	json_string = json.dumps(list,ensure_ascii=False).encode('utf8')
 	img_data = img_data + album[0] + "='" + json_string + "';"
 
 
