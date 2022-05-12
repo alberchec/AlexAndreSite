@@ -23,4 +23,5 @@ window.onresize=function(){
 	aomudartamanhoSSlide();
 	aomudartamanhoSS();
 	aomudartamanhoSMM();
+	galleryControl();
 };

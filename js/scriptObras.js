@@ -31,6 +31,7 @@ function handleElement(j){
 			numFoto = 1;
 			titgal(j);
 			document.getElementById("corpo").style.overflow="hidden";
+			galleryControl();
 		};
 	};
 
@@ -102,3 +103,53 @@ document.getElementById("galeriasetaesquerda").onclick=function(){setas(1)};
 function titgal(i){
 	document.getElementById("titulogaleria").innerHTML=titgaleria[i];
 };
+
+/*############################################################################*/
+/*############################################################################*/
+/*############################################################################*/
+/*CSS REPLACEMENT*/
+
+/*Control size of gallery*/
+function galleryControl(){
+	var windWidth = window.innerWidth;
+	var windHeight = window.innerHeight;
+	var screenRatio = windWidth/windHeight;
+	var gallery = document.getElementById("galeriadefotosinner");
+	gallery.style.top = "50%";
+	if(screenRatio >= (4/3)){
+		var galleryHeight = windHeight * 0.95;
+		var galleryWidth = galleryHeight * 1.33;
+		gallery.style.height = galleryHeight+"px";
+		gallery.style.width = galleryWidth+"px";
+	}else{
+		var galleryWidth = windWidth * 0.95;
+		var galleryHeight = galleryWidth / 1.33;
+		gallery.style.width = galleryWidth+"px";
+		gallery.style.height = galleryHeight+"px";
+	}
+}
+
+/*Control arrows hover effect*/
+function changeArrow(){
+	var img = this.getElementsByTagName("img")[0].style;
+	img.backgroundColor = "rgba(255,255,255,0.7)";
+	img.transition = "0.1s";
+	img.transform = "translate(0,-50%) scale(1.2)";
+	img.opacity = "1";
+}
+function restoreArrow(){
+	var img = this.getElementsByTagName("img")[0].style;
+	img.backgroundColor = "transparent";
+	img.transition = "0.3s";
+	img.transform = "translate(0,-50%)";
+	img.opacity = "0";
+}
+
+var arrowLeft = document.getElementById("galeriasetaesquerda");
+var arrowRight = document.getElementById("galeriasetadireita");
+
+arrowRight.addEventListener("mouseover",changeArrow);
+arrowLeft.addEventListener("mouseover",changeArrow);
+
+arrowRight.addEventListener("mouseout",restoreArrow);
+arrowLeft.addEventListener("mouseout",restoreArrow);
