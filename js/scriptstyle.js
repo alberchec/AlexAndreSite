@@ -234,7 +234,7 @@ function larguraEstilo3(){
 			padding-bottom:3vh; 
 		}
 		header nav ul li a {
-			font-size:4vh;
+			font-size:3vh;
 			padding:0 1vw;
 		}
 		#fundomobile{
@@ -355,7 +355,7 @@ function larguraEstiloMobile(){
 			padding-bottom:3vh; 
 		}
 		header nav ul li a {
-			font-size:7vw;
+			font-size:5vw;
 			padding:0 1vw;
 		}
 		#fundomobile{
