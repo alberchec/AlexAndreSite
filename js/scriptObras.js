@@ -118,12 +118,14 @@ function galleryControl(){
 	gallery.style.top = "50%";
 	if(screenRatio >= (4/3)){
 		var galleryHeight = windHeight * 0.95;
-		var galleryWidth = galleryHeight * 1.33;
+		galleryHeight -= galleryHeight % 3;
+		var galleryWidth = galleryHeight * 4 / 3;
 		gallery.style.height = galleryHeight+"px";
 		gallery.style.width = galleryWidth+"px";
 	}else{
 		var galleryWidth = windWidth * 0.95;
-		var galleryHeight = galleryWidth / 1.33;
+		galleryWidth -= galleryWidth % 4;
+		var galleryHeight = galleryWidth * 3 / 4;
 		gallery.style.width = galleryWidth+"px";
 		gallery.style.height = galleryHeight+"px";
 	}
