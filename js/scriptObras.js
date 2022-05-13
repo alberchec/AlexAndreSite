@@ -116,19 +116,24 @@ function galleryControl(){
 	var screenRatio = windWidth/windHeight;
 	var gallery = document.getElementById("galeriadefotosinner");
 	gallery.style.top = "50%";
+
+	var galleryWidth;
+	var galleryHeight;
 	if(screenRatio >= (4/3)){
-		var galleryHeight = windHeight * 0.95;
+		galleryHeight = windHeight * 0.95;
 		galleryHeight -= galleryHeight % 3;
-		var galleryWidth = galleryHeight * 4 / 3;
-		gallery.style.height = galleryHeight+"px";
-		gallery.style.width = galleryWidth+"px";
+		galleryWidth = galleryHeight * 4 / 3;
 	}else{
-		var galleryWidth = windWidth * 0.95;
+		galleryWidth = windWidth * 0.95;
 		galleryWidth -= galleryWidth % 4;
-		var galleryHeight = galleryWidth * 3 / 4;
-		gallery.style.width = galleryWidth+"px";
-		gallery.style.height = galleryHeight+"px";
+		galleryHeight = galleryWidth * 3 / 4;
 	}
+	if(galleryWidth > 1500){
+		galleryWidth = 1500;
+		galleryHeight = 1125;
+	}
+	gallery.style.width = galleryWidth+"px";
+	gallery.style.height = galleryHeight+"px";
 }
 
 /*Control arrows hover effect*/
