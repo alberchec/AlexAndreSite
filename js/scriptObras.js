@@ -1,40 +1,37 @@
-var numFoto;
+var numFoto = 1;
+var album = 1;
+var img = document.getElementById("fotogaleria");
 
 /* SETAR OPCOES CAIXA DE OBRAS */
-var htmlnacaixa2;
-var caixadeselecao=document.getElementById("caixadeopcoes");
-for(i=(titgaleria.length-1);i>0;i=i-1){
-	htmlnacaixa2="<option value="+i+">"+titgaleria[i]+"</option>"+htmlnacaixa2;
-};
-caixadeselecao.innerHTML=htmlnacaixa2;
 
 function handleElement(j){
+	var list = document.getElementById("obras"+j);
 	/* APARECER TEXTO SOBRE FOTO */
-	document.getElementById("obras"+j).onmouseover=function(){
+	list.onmouseover=function(){
 		if(window.innerWidth>=0.5*screen.width){
-			document.getElementById("obras"+j+"texto").style.opacity="1";
+			document.getElementById("obras"+j+"texto").style.opacity = "1";
+			list.getElementsByTagName("img")[0].style.opacity = "0.7";
 		};
 	};
-	document.getElementById("obras"+j).onmouseout=function(){
+	list.onmouseout=function(){
 		if(window.innerWidth>=0.5*screen.width){
 			document.getElementById("obras"+j+"texto").style.opacity="0";
+			list.getElementsByTagName("img")[0].style.opacity = "1";
 		};
 	};
 
 	/* APARECER GALERIA DE FOTOS AO CLICAR EM UMA FOTO*/
-	document.getElementById("obras"+j).onclick=function(){
+	list.onclick=function(){
 		if(window.innerWidth>360*razaopixels){
+			album = j;
 			document.getElementById("galeriadefotos").style.display="block";
 			document.getElementById("galeriadefotosinner").style.display="block";
-			document.getElementById("fotogaleria").src="Images/Gallery/obra"+j+"foto1.jpg";
+			img.src="Images/Gallery/obra"+j+"foto1.jpg";
 			document.getElementById("textogaleria").innerHTML=txtobras[j];
-			document.getElementById("caixadeopcoes").value=j;
-			numFoto=1;
-			gerarNumfotos();
+			numFoto = 1;
 			titgal(j);
 			document.getElementById("corpo").style.overflow="hidden";
-			//manocrien=document.getElementById("fotogaleria").getAttribute("data-src");
-			//document.getElementById("fotogaleria").setAttribute("src",manocrien);
+			galleryControl();
 		};
 	};
 
@@ -54,110 +51,112 @@ document.getElementById("fechargaleria").onclick=function(){
 	fechargal();
 };
 
-/* MUDAR OBRA PELA CAIXA DE OPCOES */
-document.getElementById("caixadeopcoes").onchange=function(){
-	mudarobra123();
-};
 function mudarobra123(){
-	var caixaValue=parseInt(document.getElementById("caixadeopcoes").value);
-	document.getElementById("fotogaleria").src="Images/Gallery/obra"+caixaValue+"foto1.jpg";
-	document.getElementById("textogaleria").innerHTML=txtobras[caixaValue];
-	gerarNumfotos();
-	titgal(caixaValue);
+	img.src="Images/Gallery/obra"+album+"foto1.jpg";
+	document.getElementById("textogaleria").innerHTML=txtobras[album];
+	titgal(album);
 };
 
 
 /* MUDAR FOTOS PELAS SETAS*/
-var escolhadaSeta;
-function setas(k){
-	var caixaValue5=parseInt(document.getElementById("caixadeopcoes2").value);
-	if(escolhadaSeta==0){
+function setas(escolhadaSeta){
+	if(escolhadaSeta == 0){
 		/* MUDA PARA A FOTO MAIOR ATE A ULTIMA DA OBRA */
-		if(caixaValue5<qtdFotosporObra[k]){
-			caixaValue5=caixaValue5+1;
+		if(numFoto < qtdFotosporObra[album]){
+			numFoto += 1;
 		/* NA ULTIMA FOTO MUDAR PARA OUTRA OBRA AO CLICAR NA DIREITA */
 		}else{
-			if(k<8){
-				k=parseInt(document.getElementById("caixadeopcoes").value)+1;
-				document.getElementById("caixadeopcoes").value=k;
+			if(album < 8){
+				album += 1
 				mudarobra123();
 			}else{
-				document.getElementById("caixadeopcoes").value=1;
-				k=1;
+				album = 1
 				mudarobra123();
 			};
-			caixaValue5=1;
+			numFoto = 1;
 		};
 	}else{
 		/* MUDA PARA A FOTO MENOR ATE A PRIMEIRA DA OBRA */
-		if(caixaValue5>1 && caixaValue5<=qtdFotosporObra[k]){
-			caixaValue5=caixaValue5-1;
+		if(numFoto > 1 && numFoto <= qtdFotosporObra[album]){
+			numFoto -= 1;
 		/* NA PRIMEIRA FOTO MUDAR PARA OUTRA OBRA AO CLICAR NA ESQUERDA */
 		}else{
-			if(k>1){
-				k=parseInt(document.getElementById("caixadeopcoes").value)-1;
-				document.getElementById("caixadeopcoes").value=k;
+			if(album > 1){
+				album -= 1;
 				mudarobra123();
 			}else{
-				document.getElementById("caixadeopcoes").value=8;
-				k=8;
+				album = 8;
 				mudarobra123();
 			};
-			caixaValue5=qtdFotosporObra[k];
+			numFoto = qtdFotosporObra[album];
 		};
 	};
-	document.getElementById("fotogaleria").src="Images/Gallery/obra"+k+"foto"+caixaValue5+".jpg";
-	/* SETAR CAIXA DE SELECAO DAS FOTOS */
-	document.getElementById("caixadeopcoes2").value=caixaValue5;	
-};
-for(k=1;k<=8;k++){setas(k);};
-/* MUDAR FOTOS PELAS SETAS */
-document.getElementById("galeriasetadireita").onclick=function(){
-	escolhadaSeta=0;
-	var f=parseInt(document.getElementById("caixadeopcoes").value);
-	setas(f);
-};
-document.getElementById("galeriasetaesquerda").onclick=function(){
-	escolhadaSeta=1;
-	var f=parseInt(document.getElementById("caixadeopcoes").value);
-	setas(f);
+	img.src="Images/Gallery/obra"+album+"foto"+numFoto+".jpg";
 };
 
-/* MUDAR FOTOS PELA CAIXA DE SELECAO */
-function gerarNumfotos(){
-	var htmlnacaixa;
-	var caixadeselecao2=document.getElementById("caixadeopcoes2");
-	var caixaValue2=parseInt(document.getElementById("caixadeopcoes").value);
-	for(l=qtdFotosporObra[caixaValue2];l>0;l=l-1){
-		htmlnacaixa="<option value="+l+">foto "+l+"</option>"+htmlnacaixa;
-	};
-	caixadeselecao2.innerHTML=htmlnacaixa;
-	htmlnacaixa=null;
-};
-document.getElementById("caixadeopcoes2").onchange=function(){
-	var caixaValue3=document.getElementById("caixadeopcoes2").value;
-	var caixaValue4=document.getElementById("caixadeopcoes").value;
-	document.getElementById("fotogaleria").src="Images/Gallery/obra"+caixaValue4+"foto"+caixaValue3+".jpg";
-};
+/* MUDAR FOTOS PELAS SETAS */
+document.getElementById("galeriasetadireita").onclick=function(){setas(0)};
+document.getElementById("galeriasetaesquerda").onclick=function(){setas(1)};
+
 
 /* SETAR TITULO DA GALERIA DE IMAGENS */
 function titgal(i){
 	document.getElementById("titulogaleria").innerHTML=titgaleria[i];
 };
 
-/*  ESCONDER CAIXA DE INFORMACOES */
-document.getElementById("botaoesconder").onclick=function(){
-	if(document.getElementById("galeriadefotosinnerinner").style.display=="none"){
-		document.getElementById("galeriadefotosinnerinner").style.display="block";
-		document.getElementById("galeriadefotosinnerinner2").style.display="block";
-		document.getElementById("galeriadefotosinnerinner0").style.padding="1%";
-		document.getElementById("botaoesconder2").src="Images/hidebutton.png";
-	}else{
-		document.getElementById("galeriadefotosinnerinner").style.display="none";
-		document.getElementById("galeriadefotosinnerinner2").style.display="none";
-		document.getElementById("galeriadefotosinnerinner0").style.padding="0.2%";
-		document.getElementById("botaoesconder2").src="Images/hidebutton2.png";
-	};
-};
+/*############################################################################*/
+/*############################################################################*/
+/*############################################################################*/
+/*CSS REPLACEMENT*/
 
-//B>numFoto, a>caixaValue, c>escolhadaSeta, e>qtdFotosporObra, g>caixaValue2
+/*Control size of gallery*/
+function galleryControl(){
+	var windWidth = window.innerWidth;
+	var windHeight = window.innerHeight;
+	var screenRatio = windWidth/windHeight;
+	var gallery = document.getElementById("galeriadefotosinner");
+	gallery.style.top = "50%";
+
+	var galleryWidth;
+	var galleryHeight;
+	if(screenRatio >= (4/3)){
+		galleryHeight = windHeight * 0.95;
+		galleryHeight -= galleryHeight % 3;
+		galleryWidth = galleryHeight * 4 / 3;
+	}else{
+		galleryWidth = windWidth * 0.95;
+		galleryWidth -= galleryWidth % 4;
+		galleryHeight = galleryWidth * 3 / 4;
+	}
+	if(galleryWidth > 1500){
+		galleryWidth = 1500;
+		galleryHeight = 1125;
+	}
+	gallery.style.width = galleryWidth+"px";
+	gallery.style.height = galleryHeight+"px";
+}
+
+/*Control arrows hover effect*/
+function changeArrow(){
+	var img = this.getElementsByTagName("img")[0].style;
+	img.backgroundColor = "rgba(255,255,255,0.7)";
+	img.transition = "0.1s";
+	img.transform = "translate(0,-50%) scale(1.2)";
+	img.opacity = "1";
+}
+function restoreArrow(){
+	var img = this.getElementsByTagName("img")[0].style;
+	img.backgroundColor = "transparent";
+	img.transition = "0.3s";
+	img.transform = "translate(0,-50%)";
+	img.opacity = "0";
+}
+
+var arrowLeft = document.getElementById("galeriasetaesquerda");
+var arrowRight = document.getElementById("galeriasetadireita");
+
+arrowRight.addEventListener("mouseover",changeArrow);
+arrowLeft.addEventListener("mouseover",changeArrow);
+
+arrowRight.addEventListener("mouseout",restoreArrow);
+arrowLeft.addEventListener("mouseout",restoreArrow);
