@@ -2,8 +2,15 @@ var numFoto = 1;
 var album = 1;
 var img = document.getElementById("fotogaleria");
 
-/* SETAR OPCOES CAIXA DE OBRAS */
+/*Get Image*/
+function getImage(){
+	var year = img_data[album].file.substring(0,4);
+	var month = img_data[album].file.substring(4,6);
+	var day = img_data[album].file.substring(6,8);
+	return "piwigo_app/upload/" + year +"/"+ month +"/"+ day +"/"+ img_data[album][numFoto].file;
+}
 
+/* SETAR OPCOES CAIXA DE OBRAS */
 function handleElement(j){
 	var list = document.getElementById("obras"+j);
 	/* APARECER TEXTO SOBRE FOTO */
@@ -24,12 +31,12 @@ function handleElement(j){
 	list.onclick=function(){
 		if(window.innerWidth>360*razaopixels){
 			album = j;
+			numFoto = 1;
 			document.getElementById("galeriadefotos").style.display="block";
 			document.getElementById("galeriadefotosinner").style.display="block";
-			img.src="Images/Gallery/obra"+j+"foto1.jpg";
+			img.src = getImage();
 			document.getElementById("textogaleria").innerHTML=txtobras[j];
-			numFoto = 1;
-			titgal(j);
+			titgal();
 			document.getElementById("corpo").style.overflow="hidden";
 			galleryControl();
 		};
@@ -52,17 +59,18 @@ document.getElementById("fechargaleria").onclick=function(){
 };
 
 function mudarobra123(){
-	img.src="Images/Gallery/obra"+album+"foto1.jpg";
-	document.getElementById("textogaleria").innerHTML=txtobras[album];
-	titgal(album);
+	img.src = getImage();
+	document.getElementById("textogaleria").innerHTML = img_data[album][numFoto].comment;
+	titgal();
 };
 
 
 /* MUDAR FOTOS PELAS SETAS*/
 function setas(escolhadaSeta){
+	var qtdFotosporObra = img_data[album].length;
 	if(escolhadaSeta == 0){
 		/* MUDA PARA A FOTO MAIOR ATE A ULTIMA DA OBRA */
-		if(numFoto < qtdFotosporObra[album]){
+		if(numFoto < qtdFotosporObra){
 			numFoto += 1;
 		/* NA ULTIMA FOTO MUDAR PARA OUTRA OBRA AO CLICAR NA DIREITA */
 		}else{
@@ -77,7 +85,7 @@ function setas(escolhadaSeta){
 		};
 	}else{
 		/* MUDA PARA A FOTO MENOR ATE A PRIMEIRA DA OBRA */
-		if(numFoto > 1 && numFoto <= qtdFotosporObra[album]){
+		if(numFoto > 1 && numFoto <= qtdFotosporObra){
 			numFoto -= 1;
 		/* NA PRIMEIRA FOTO MUDAR PARA OUTRA OBRA AO CLICAR NA ESQUERDA */
 		}else{
@@ -88,10 +96,10 @@ function setas(escolhadaSeta){
 				album = 8;
 				mudarobra123();
 			};
-			numFoto = qtdFotosporObra[album];
+			numFoto = qtdFotosporObra;
 		};
 	};
-	img.src="Images/Gallery/obra"+album+"foto"+numFoto+".jpg";
+	img.src = getImage();
 };
 
 /* MUDAR FOTOS PELAS SETAS */
@@ -100,8 +108,8 @@ document.getElementById("galeriasetaesquerda").onclick=function(){setas(1)};
 
 
 /* SETAR TITULO DA GALERIA DE IMAGENS */
-function titgal(i){
-	document.getElementById("titulogaleria").innerHTML=titgaleria[i];
+function titgal(){
+	document.getElementById("titulogaleria").innerHTML = img_data[album][numFoto].name;
 };
 
 /*############################################################################*/

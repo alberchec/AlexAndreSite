@@ -17,4 +17,27 @@ entre outros.";
 
 var txtobras=["", textoobra1, textoobra2, textoobra3, textoobra4, textoobra5, textoobra6, textoobra7, textoobra8];
 
-var qtdFotosporObra=[0,10,7,10,8,8,17,2,4];
+/*var qtdFotosporObra=[0,10,7,10,8,8,17,2,4];*/
+
+function jsonEscape(str){
+    return str.replace(/\n/g,"<br>").replace(/\r/g,"\\r").replace(/\t/g,"&emsp;");
+}
+
+BasePiso = JSON.parse(jsonEscape(BasePiso));
+Pav = JSON.parse(jsonEscape(Pav));
+CorteAterro = JSON.parse(jsonEscape(CorteAterro));
+PavExt = JSON.parse(jsonEscape(PavExt));
+Lot = JSON.parse(jsonEscape(Lot));
+Dren = JSON.parse(jsonEscape(Dren));
+Dem = JSON.parse(jsonEscape(Dem));
+Infra = JSON.parse(jsonEscape(Infra));
+
+var img_data = [""];
+img_data.push(BasePiso);
+img_data.push(Pav);
+img_data.push(CorteAterro);
+img_data.push(PavExt);
+img_data.push(Lot);
+img_data.push(Dren);
+img_data.push(Dem);
+img_data.push(Infra);
