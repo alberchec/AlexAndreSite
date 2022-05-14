@@ -4,9 +4,9 @@ var img = document.getElementById("fotogaleria");
 
 /*Get Image*/
 function getImage(){
-	var year = img_data[album].file.substring(0,4);
-	var month = img_data[album].file.substring(4,6);
-	var day = img_data[album].file.substring(6,8);
+	var year = img_data[album][numFoto].file.substring(0,4);
+	var month = img_data[album][numFoto].file.substring(4,6);
+	var day = img_data[album][numFoto].file.substring(6,8);
 	return "piwigo_app/upload/" + year +"/"+ month +"/"+ day +"/"+ img_data[album][numFoto].file;
 }
 
