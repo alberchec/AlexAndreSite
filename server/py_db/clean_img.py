@@ -10,7 +10,7 @@ from glob import glob
 files = glob("/var/www/html/imagesdb/med-*.jpg")
 
 for file in files:
-	filename = file[25:]
+	filename = file[27:]
 	query = "SELECT id FROM piwigo_images WHERE path LIKE '%" + filename + "'"
 	results = read_query(connection,query)
 
