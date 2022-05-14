@@ -15,8 +15,8 @@ for result in results:
     path = "/var/www/html/piwigo_app/" + result[1][2:]
     filename = result[1][20:]
     path2 = "/home/alberchec/temp/" + filename
-    pathm = "/var/www/html/images/med-" + filename
-    paths = "/var/www/html/images/sml-" + filename
+    pathm = "/var/www/html/imagesdb/med-" + filename
+    paths = "/var/www/html/imagesdb/sml-" + filename
     cp(path,path2)
     resize(path2)
     cp(path2,pathm)

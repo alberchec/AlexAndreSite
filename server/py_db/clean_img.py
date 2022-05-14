@@ -7,7 +7,7 @@ from sqlConnection import connection,read_query
 from os import remove
 from glob import glob
 
-files = glob("/var/www/html/images/med-*.jpg")
+files = glob("/var/www/html/imagesdb/med-*.jpg")
 
 for file in files:
 	filename = file[25:]
@@ -16,6 +16,6 @@ for file in files:
 
 	if results == []:
 		remove(file)
-		remove("/var/www/html/images/sml-" + filename)
+		remove("/var/www/html/imagesdb/sml-" + filename)
 
 connection.close()
