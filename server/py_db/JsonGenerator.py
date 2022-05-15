@@ -51,18 +51,11 @@ for album in albums:
 	img_data = img_data + album[0] + "='" + json_string + "';"
 
 
-from glob import glob
-from os import remove
-
-files = glob("/var/www/html/images.json?*")
-for file in files:
-	remove(file)
-
 lastmod = open("/home/alberchec/server/py_db/lastmodified.txt","w")
 lastmod.write(date)
 lastmod.close()
 
-fileout = open("/var/www/html/images.json?" + date,"w")
+fileout = open("/var/www/html/images.js","w")
 fileout.write(img_data)
 fileout.close()
 
