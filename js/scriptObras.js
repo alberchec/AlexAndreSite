@@ -58,7 +58,7 @@ document.getElementById("fechargaleria").onclick=function(){
 	fechargal();
 };
 
-function mudarobra123(){
+function mudarfoto(){
 	img.src = getImage();
 	document.getElementById("textogaleria").innerHTML = img_data[album][numFoto].comment;
 	titgal();
@@ -77,10 +77,8 @@ function setas(escolhadaSeta){
 			numFoto = 0;
 			if(album < 7){
 				album += 1
-				mudarobra123();
 			}else{
 				album = 0
-				mudarobra123();
 			};
 		};
 	}else{
@@ -92,14 +90,12 @@ function setas(escolhadaSeta){
 			numFoto = qtdFotosporObra - 1;
 			if(album > 0){
 				album -= 1;
-				mudarobra123();
 			}else{
 				album = 7;
-				mudarobra123();
 			};
 		};
 	};
-	img.src = getImage();
+	mudarfoto();
 };
 
 /* MUDAR FOTOS PELAS SETAS */
