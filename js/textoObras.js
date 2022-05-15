@@ -23,21 +23,9 @@ function jsonEscape(str){
     return str.replace(/\n/g,"<br>").replace(/\r/g,"\\r").replace(/\t/g,"&emsp;");
 }
 
-BasePiso = JSON.parse(jsonEscape(BasePiso));
-Pav = JSON.parse(jsonEscape(Pav));
-CorteAterro = JSON.parse(jsonEscape(CorteAterro));
-PavExt = JSON.parse(jsonEscape(PavExt));
-Lot = JSON.parse(jsonEscape(Lot));
-Dren = JSON.parse(jsonEscape(Dren));
-Dem = JSON.parse(jsonEscape(Dem));
-Infra = JSON.parse(jsonEscape(Infra));
-
+img_category = [BasePiso,Pav,CorteAterro,PavExt,Lot,Dren,Dem,Infra];
 var img_data = [""];
-img_data.push(BasePiso);
-img_data.push(Pav);
-img_data.push(CorteAterro);
-img_data.push(PavExt);
-img_data.push(Lot);
-img_data.push(Dren);
-img_data.push(Dem);
-img_data.push(Infra);
+
+for(var i=0;i<8;i++){
+    img_data.push(JSON.parse(jsonEscape(img_category[i])));
+}
