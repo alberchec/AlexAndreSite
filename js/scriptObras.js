@@ -83,16 +83,16 @@ function setas(escolhadaSeta){
 		};
 	}else{
 		/* MUDA PARA A FOTO MENOR ATE A PRIMEIRA DA OBRA */
-		if(numFoto > 0 && numFoto < qtdFotosporObra){
+		if(numFoto > 0){
 			numFoto -= 1;
 		/* NA PRIMEIRA FOTO MUDAR PARA OUTRA OBRA AO CLICAR NA ESQUERDA */
 		}else{
-			numFoto = qtdFotosporObra - 1;
 			if(album > 0){
 				album -= 1;
 			}else{
 				album = 7;
 			};
+			numFoto = img_data[album].length - 1;
 		};
 	};
 	mudarfoto();
