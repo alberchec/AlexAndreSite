@@ -20,7 +20,7 @@ var txtobras=["", textoobra1, textoobra2, textoobra3, textoobra4, textoobra5, te
 /*var qtdFotosporObra=[0,10,7,10,8,8,17,2,4];*/
 
 function jsonEscape(str){
-    return str.replace(/\n/g,"<br>").replace(/\r/g,"\\r").replace(/\t/g,"&emsp;");
+    return str.replace(/\n/g,"&nbsp;").replace(/\r/g,"\\r").replace(/\t/g,"&emsp;");
 }
 
 var img_category = [BasePiso,Pav,CorteAterro,PavExt,Lot,Dren,Dem,Infra];
