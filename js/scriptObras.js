@@ -30,7 +30,7 @@ function handleElement(j){
 	/* APARECER GALERIA DE FOTOS AO CLICAR EM UMA FOTO*/
 	list.onclick=function(){
 		if(window.innerWidth>360*razaopixels){
-			album = j;
+			album = j - 1;
 			numFoto = 0;
 			document.getElementById("galeriadefotos").style.display="block";
 			document.getElementById("galeriadefotosinner").style.display="block";
@@ -43,7 +43,7 @@ function handleElement(j){
 	};
 
 };
-for(j=0;j<8;j++){handleElement(j);};
+for(j=1;j<=8;j++){handleElement(j);};
 
 /* FECHAR GALERIA DE IMAGENS */
 function fechargal(){
