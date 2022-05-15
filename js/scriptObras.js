@@ -74,6 +74,7 @@ function setas(escolhadaSeta){
 			numFoto += 1;
 		/* NA ULTIMA FOTO MUDAR PARA OUTRA OBRA AO CLICAR NA DIREITA */
 		}else{
+			numFoto = 0;
 			if(album < 7){
 				album += 1
 				mudarobra123();
@@ -81,7 +82,6 @@ function setas(escolhadaSeta){
 				album = 0
 				mudarobra123();
 			};
-			numFoto = 0;
 		};
 	}else{
 		/* MUDA PARA A FOTO MENOR ATE A PRIMEIRA DA OBRA */
@@ -89,6 +89,7 @@ function setas(escolhadaSeta){
 			numFoto -= 1;
 		/* NA PRIMEIRA FOTO MUDAR PARA OUTRA OBRA AO CLICAR NA ESQUERDA */
 		}else{
+			numFoto = qtdFotosporObra - 1;
 			if(album > 0){
 				album -= 1;
 				mudarobra123();
@@ -96,7 +97,6 @@ function setas(escolhadaSeta){
 				album = 7;
 				mudarobra123();
 			};
-			numFoto = qtdFotosporObra - 1;
 		};
 	};
 	img.src = getImage();
