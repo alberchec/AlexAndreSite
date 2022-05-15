@@ -270,7 +270,8 @@ function aomudartamanhoSSlide(){
 }
 
 function link4(){
-	window.open("https://drive.google.com/file/d/1pFD79WON0kuGcXxIE3DSJtd3Rmp6UErI/view");
+	/*window.open("https://drive.google.com/file/d/1pFD79WON0kuGcXxIE3DSJtd3Rmp6UErI/view");*/
+	window.open("apresentacao-wch.pdf");
 }
 
 
