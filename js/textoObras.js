@@ -23,8 +23,8 @@ function jsonEscape(str){
     return str.replace(/\n/g,"<br>").replace(/\r/g,"\\r").replace(/\t/g,"&emsp;");
 }
 
-img_category = [BasePiso,Pav,CorteAterro,PavExt,Lot,Dren,Dem,Infra];
-var img_data = [""];
+var img_category = [BasePiso,Pav,CorteAterro,PavExt,Lot,Dren,Dem,Infra];
+var img_data = [];
 
 for(var i=0;i<8;i++){
     img_data.push(JSON.parse(jsonEscape(img_category[i])));
