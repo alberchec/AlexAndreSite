@@ -413,8 +413,12 @@ function larguraEstiloMobile(){
 		}
 		#slidetexto3{
 			width:70vw;
-			top:50vh;
-			left:50vw;
+			top:20vh;
+			left:50%;
+		}
+		.textoslide3{
+			text-align:center;
+			transform:translate(-50%);
 		}
 		#slidetexto4{
 			width:80vw;

@@ -183,7 +183,7 @@ header nav ul li a {
 }
 #slidetexto1{
 	right:2vw;
-	top:25vh;
+	top:20vh;
 }
 .textoslide1{
 	text-align:right;
@@ -196,13 +196,11 @@ header nav ul li a {
 	text-align: right;
 }
 #slidetexto3{
-	top:50vh;
-	left: 50%;
+	top:25vh;
+	right:4vw;
 }
 .textoslide3{
-	text-align: center;
-	left:50%;
-	transform:translate(-50%);
+	text-align: right;
 }
 #slidetexto4{
 	top:50vh;
