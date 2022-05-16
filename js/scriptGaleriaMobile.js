@@ -1,8 +1,8 @@
 function getMedImg(album,numFoto){
-	return "imagesdb/med-" + img_data[album][numFoto].file;
+	return "imagesdb/med-" + img_data[album-1][numFoto-1].file;
 }
 function getSmlImg(album,numFoto){
-	return "imagesdb/sml-" + img_data[album][numFoto].file;
+	return "imagesdb/sml-" + img_data[album-1][numFoto-1].file;
 }
 
 /*######################*/
