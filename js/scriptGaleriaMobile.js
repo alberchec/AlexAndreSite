@@ -1,19 +1,28 @@
+function getMedImg(album,numFoto){
+	return = "imagesdb/med-" + img_data[album][numFoto].file;
+}
+function getSmlImg(album,numFoto){
+	return = "imagesdb/sml-" + img_data[album][numFoto].file;
+}
+
+/*######################*/
 var listaObraMobile="-";
 for(i=8;i>0;i=i-1){
 	var listaMobileFotos=null;
 	var fotosloop;
 	/* MAXIMO DE QUATRO FOTOS NA LISTA */
-	if(qtdFotosporObra[i]<=4){
-		fotosloop=qtdFotosporObra[i];
+	var qtdFotosporObra = img_data[i-1].length;
+	if(qtdFotosporObra<=4){
+		fotosloop=qtdFotosporObra;
 	}else{
 		fotosloop=4;
 	}
 	/* COLOCANDO AS RESPECTIVAS FOTOS NA LISTA, SEM O INCONVENIENTE VALOR DA VARIAVEL INICIAL */
 	for(j=fotosloop;j>0;j=j-1){
 		if(j==fotosloop){
-			listaMobileFotos="<li id='listaMobileObra"+i+"Foto"+j+"' class='listaMobileObraFotoslista'><h15 class='VerMaisMobileGaleria'>&nbsp;+&nbsp;</h15><img src='Images/GalleryMobile/BlurImg/obra"+i+"foto"+j+".jpg'/></li>";
+			listaMobileFotos="<li id='listaMobileObra"+i+"Foto"+j+"' class='listaMobileObraFotoslista'><h15 class='VerMaisMobileGaleria'>&nbsp;+&nbsp;</h15><img src='"+getSmlImg(i,j)+"'/></li>";
 		}else{
-			listaMobileFotos="<li id='listaMobileObra"+i+"Foto"+j+"' class='listaMobileObraFotoslista'><img src='Images/GalleryMobile/obra"+i+"foto"+j+".jpg'/></li>"+listaMobileFotos;
+			listaMobileFotos="<li id='listaMobileObra"+i+"Foto"+j+"' class='listaMobileObraFotoslista'><img src='"+getSmlImg(i,j)+"'/></li>"+listaMobileFotos;
 		};
 	};
 	/* COLOCANDO TODAS AS OBRAS EM FORMA DE LISTA */
@@ -31,9 +40,6 @@ document.getElementById("obraslista").onclick=function(){
 		document.getElementById("galeriadefotosmobile").scrollTop=0;
 		document.getElementById("corpo").style.position="fixed";
 		document.getElementById("corpo").style.overflow="hidden";
-		/*document.ontouchmove = function(e){ e.preventDefault(); }
-		document.querySelector("section").style.display="none";
-		document.getElementById("slideshow").style.display="none";*/
 	};
 };
 /* FECHAR A GALERIA MOBILE */
@@ -43,25 +49,23 @@ document.getElementById("fechargalmobile").onclick=function(){
 	document.getElementById("corpo").style.position="static";
 	document.getElementById("corpo").style.overflow="scroll";
 	scrollTo(0,document.getElementById("obrasreal").getBoundingClientRect().y);
-	/*document.ontouchmove = function(e){ return true; }
-	document.querySelector("section").style.display="static";
-	document.getElementById("slideshow").style.display="relative";*/
 };
 
 /* DESIGN FOTOS GALERIA MOBILE */
 for(i=1;i<=8;i++){
-	if(qtdFotosporObra[i]==1){
+	var qtdFotosporObra = img_data[i-1].length;
+	if(qtdFotosporObra==1){
 		document.getElementById("listaMobileObra"+i+"Foto1").style.width="90vw";
 		document.getElementById("listaMobileObra"+i+"Foto1").style.height="70vw";
 		document.getElementById("listaMobileObra"+i+"Foto1").style.opacity="1";
-	}else if(qtdFotosporObra[i]==2){
+	}else if(qtdFotosporObra==2){
 		document.getElementById("listaMobileObra"+i+"Foto1").style.width="90vw";
 		document.getElementById("listaMobileObra"+i+"Foto1").style.height="35vw";
 
 		document.getElementById("listaMobileObra"+i+"Foto2").style.width="90vw";
 		document.getElementById("listaMobileObra"+i+"Foto2").style.height="35vw";
 		document.getElementById("listaMobileObra"+i+"Foto2").style.opacity="1";
-	}else if(qtdFotosporObra[i]==3){
+	}else if(qtdFotosporObra==3){
 		document.getElementById("listaMobileObra"+i+"Foto1").style.width="90vw";
 		document.getElementById("listaMobileObra"+i+"Foto1").style.height="40vw";
 
@@ -72,7 +76,7 @@ for(i=1;i<=8;i++){
 		document.getElementById("listaMobileObra"+i+"Foto3").style.width="44.625vw";
 		document.getElementById("listaMobileObra"+i+"Foto3").style.height="30vw";
 		document.getElementById("listaMobileObra"+i+"Foto3").style.opacity="1";
-	}else if(qtdFotosporObra[i]>=4){
+	}else if(qtdFotosporObra>=4){
 		document.getElementById("listaMobileObra"+i+"Foto1").style.width="90vw";
 		document.getElementById("listaMobileObra"+i+"Foto1").style.height="40vw";
 
@@ -96,10 +100,10 @@ function slideshowMobileObras(i){
 		document.getElementById("fechargaleriamobile").style.display="block";
 		determinarFotosSlideShowMobile(i);
 		document.getElementById("galeriadefotosmobile").style.overflow="hidden";
-		//document.getElementById("slideshowMobileFoto").src="Images/GalleryMobile/obra"+i+"foto1.jpg";
 	};
 };
 for(i=1;i<=8;i++){
+	var qtdFotosporObra = img_data[i-1].length;
 	slideshowMobileObras(i);
 };
 /* FECHAR SLIDESHOW MOBILE */
@@ -117,12 +121,12 @@ document.getElementById("slideshowMobileFotoDiv").onclick=function(){
 };
 
 function determinarFotosSlideShowMobile(i){
-	for(j=qtdFotosporObra[i];j>0;j=j-1){
+	for(j=qtdFotosporObra;j>0;j=j-1){
 		var fotosSlideShowMobileProp;
-		if(j==qtdFotosporObra[i]){
-			fotosSlideShowMobileProp="<li><img src='Images/GalleryMobile/obra"+i+"foto"+j+".jpg'/></li>";
+		if(j==qtdFotosporObra){
+			fotosSlideShowMobileProp="<li><img src='"+getMedImg(i,j)+"'/></li>";
 		}else{
-			fotosSlideShowMobileProp="<li><img src='Images/GalleryMobile/obra"+i+"foto"+j+".jpg'/></li>"+fotosSlideShowMobileProp;
+			fotosSlideShowMobileProp="<li><img src='"+getMedImg(i,j)+"'/></li>"+fotosSlideShowMobileProp;
 		};
 		document.getElementById("slideshowMobilePropriamente").innerHTML=fotosSlideShowMobileProp;
 	};
