@@ -22,7 +22,7 @@ for(i=8;i>0;i=i-1){
 		if(j==fotosloop){
 			listaMobileFotos="<li id='listaMobileObra"+i+"Foto"+j+"' class='listaMobileObraFotoslista'><h15 class='VerMaisMobileGaleria'>&nbsp;+&nbsp;</h15><img src='"+getSmlImg(i,j)+"'/></li>";
 		}else{
-			listaMobileFotos="<li id='listaMobileObra"+i+"Foto"+j+"' class='listaMobileObraFotoslista'><img src='"+getSmlImg(i,j)+"'/></li>"+listaMobileFotos;
+			listaMobileFotos="<li id='listaMobileObra"+i+"Foto"+j+"' class='listaMobileObraFotoslista'><img src='"+getMedImg(i,j)+"'/></li>"+listaMobileFotos;
 		};
 	};
 	/* COLOCANDO TODAS AS OBRAS EM FORMA DE LISTA */
