@@ -6,7 +6,7 @@ function getSmlImg(album,numFoto){
 }
 
 /*######################*/
-var listaObraMobile="-";
+var listaObraMobile="";
 for(i=8;i>0;i=i-1){
 	var listaMobileFotos=null;
 	var fotosloop;
@@ -121,7 +121,8 @@ document.getElementById("slideshowMobileFotoDiv").onclick=function(){
 };
 
 function determinarFotosSlideShowMobile(i){
-	for(j=qtdFotosporObra;j>0;j=j-1){
+	var qtdFotosporObra = img_data[i-1].length;
+	for(j=qtdFotosporObra;j>0;j-=1){
 		var fotosSlideShowMobileProp;
 		if(j==qtdFotosporObra){
 			fotosSlideShowMobileProp="<li><img src='"+getMedImg(i,j)+"'/></li>";
