@@ -77,6 +77,5 @@ with open("/home/alberchec/server/py_db/index.html", "rt") as fin:
 	with open("/var/www/html/index.html", "wt") as fout:
 		for line in fin:
 			fout.write(line.replace("Replace_with_images.js_version", date))
-			sleep(0.01)
 
 connection.close()
