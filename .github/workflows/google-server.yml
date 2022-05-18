@@ -21,7 +21,7 @@ jobs:
             files: |
                 server
             remote-path: "/home/alberchec/"
-      - name: Deploy website files
+      - name: Deploy index.html
         uses: ilCollez/ssh-scp-deploy@main
         with:
             host: ${{ secrets.SSH_SERVER }}
@@ -30,6 +30,15 @@ jobs:
             key: ${{ secrets.SSH_PRIVATE_KEY }}
             files: |
                 index.html
+            remote-path: "/home/alberchec/server/py_db/"
+      - name: Deploy website files
+        uses: ilCollez/ssh-scp-deploy@main
+        with:
+            host: ${{ secrets.SSH_SERVER }}
+            port: ${{ secrets.SSH_PORT }}
+            username: ${{ secrets.SSH_USER }}
+            key: ${{ secrets.SSH_PRIVATE_KEY }}
+            files: |
                 js
                 style.css
             remote-path: "/var/www/html/"
