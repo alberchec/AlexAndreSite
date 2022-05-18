@@ -3,9 +3,14 @@ from sqlConnection import connection,read_query,execute_query
 from shutil import copyfile as cp
 from shutil import move as mv
 from ImageResize import resize
+import os
+from time import sleep
+
+os.nice(10)
 
 query = "SELECT id,path,compressed FROM piwigo_images WHERE compressed=0"
 results = read_query(connection,query)
+sleep(0.01)
 
 if results == []:
     connection.close()
@@ -19,12 +24,16 @@ for result in results:
     paths = "/var/www/html/imagesdb/sml-" + filename
     cp(path,path2)
     resize(path2)
+    sleep(0.01)
     cp(path2,pathm)
     resize(pathm,"-m")
+    sleep(0.01)
     cp(path2,paths)
     resize(paths,"-s")
+    sleep(0.01)
     mv(path2,path)
     query = "UPDATE piwigo_images SET compressed=1 WHERE id=" + str(result[0])
-    execute_query(connection,query)    
+    execute_query(connection,query)
+    sleep(0.01)   
 
 connection.close()

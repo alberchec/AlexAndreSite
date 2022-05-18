@@ -1,10 +1,15 @@
 import sqlConnection
 from sqlConnection import connection,read_query
+import os
+from time import sleep
+
+os.nice(10)
 
 lastmod = open("/home/alberchec/server/py_db/lastmodified.txt","r").read().splitlines()[0]
 
 query = "SELECT lastmodified FROM piwigo_images WHERE compressed=1 ORDER BY lastmodified DESC LIMIT 1"
 date = read_query(connection,query)[0][0].strftime("%Y%m%d%H%M%S")
+sleep(0.01)
 
 if(lastmod == date):
 	connection.close()
@@ -38,6 +43,7 @@ for album in albums:
 	AND A.compressed=1 ORDER BY A.date_available DESC LIMIT 50"
 
 	results = read_query(connection,query)
+	sleep(0.01)
 
 	list = []
 	for result in results:
@@ -49,11 +55,13 @@ for album in albums:
 		list.append(dic)
 	json_string = json.dumps(list,ensure_ascii=False).encode('utf8').decode()
 	img_data = img_data + album[0] + "='" + json_string + "';"
+	sleep(0.01)
 
 
 lastmod = open("/home/alberchec/server/py_db/lastmodified.txt","w")
 lastmod.write(date)
 lastmod.close()
+sleep(0.01)
 
 fileout = open("/var/www/html/images.js","w")
 fileout.write(img_data)
