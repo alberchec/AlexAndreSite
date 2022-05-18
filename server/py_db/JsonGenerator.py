@@ -66,6 +66,7 @@ sleep(0.01)
 fileout = open("/var/www/html/images.js","w")
 fileout.write(img_data)
 fileout.close()
+sleep(0.01)
 
 #Add images.js version to html file
 from datetime import datetime
@@ -75,8 +76,7 @@ date = date.strftime("%Y%m%d%H%M%S")
 with open("/home/alberchec/server/py_db/index.html", "rt") as fin:
 	with open("/var/www/html/index.html", "wt") as fout:
 		for line in fin:
-			fout.write(line.replace('Replace_with_images.js_version', date))
-			fout.write(line.replace('Replace_with_textoObras.js_version', date))
-
+			fout.write(line.replace("Replace_with_images.js_version", date))
+			sleep(0.01)
 
 connection.close()
